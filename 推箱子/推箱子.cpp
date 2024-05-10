@@ -9,7 +9,7 @@ ExMessage msg = { 0 };//定义消息结构体变量，就是反馈鼠标和键�
 IMAGE  images[ALL];//图片数组，来表示图片
 //用数字来表示道具：墙：0，地板：1，箱子目的地：2，人：3，箱子：4，命中目标：5；
 //游戏地图
-int map[9][12] = {
+int map[LINE][COLUMN] = {
 	{0,0,0,0,0,0,0,0,0,0,0,0},
 	{0,1,0,1,1,1,1,1,1,1,0,0},
 	{0,1,4,1,0,2,1,0,2,1,0,0},
@@ -20,6 +20,8 @@ int map[9][12] = {
 	{0,1,0,0,1,0,1,1,0,0,1,0},
 	{0,0,0,0,0,0,0,0,0,0,0,0},
 };
+
+
 //改变道具位置
 void changeMap(POS *pos,PROPS prop)
 {
@@ -51,12 +53,17 @@ void gameControl(DIRECTION direct)
 	
 	if (isValid(next_pos) && map[next_pos.x][next_pos.y] == FLOOR)
 	{
+		
 		changeMap(&next_pos, MAN);//小人前移
 		changeMap(&man ,FLOOR);//更新地板的位置，到小人之前的位置
 		man = next_pos;//更新小人位置坐标
+		if (isValidpd(BDS)) changeMap(&BDS, BOX_DES);
+		
 	}
+	//如果人的前方是箱子
 	else if (isValid(next_next_pos) && map[next_pos.x][next_pos.y] == BOX)
-	{//如果人的前方是箱子
+	{
+		if (isValidpd(BDS)) changeMap(&BDS, BOX_DES);
 		//两种情况，前面是地板或者是箱子目的地
 		if (map[next_next_pos.x][next_next_pos.y] == FLOOR)
 		{
@@ -71,10 +78,24 @@ void gameControl(DIRECTION direct)
 			changeMap(&man, FLOOR);
 			man = next_pos;
 		}
-
+		if (isValidpd(BDS)) changeMap(&BDS, BOX_DES);
 	}
-	
-	
+	//添加了可以经过箱子目标点功能
+	else if (isValid(next_pos) && map[next_pos.x][next_pos.y] == BOX_DES) {
+		BDS = next_pos;
+		changeMap(&next_pos, MAN);
+		changeMap(&man, FLOOR);
+		man = next_pos;
+	}
+	//添加了可以经过箱子目标点功能
+	else if (isValid(next_pos) && map[next_pos.x][next_pos.y] == HIT && map[next_next_pos.x][next_next_pos.y] == FLOOR) {
+		BDS = next_pos;
+		changeMap(&next_next_pos, BOX);
+		changeMap(&next_pos, MAN);
+		changeMap(&man, FLOOR);
+		if (isValidpd(BDS)) changeMap(&BDS, BOX_DES);
+		man = next_pos;
+	}
 	
 }
 
@@ -198,6 +219,8 @@ int main()
 		if (isGameOver()==true)
 		{
 			GameOver();
+			system("pause");
+			break;
 		}
 		Sleep(100);//休眠0.1秒
 	} while (quit == false);
