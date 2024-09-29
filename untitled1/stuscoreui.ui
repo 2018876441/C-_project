@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StuScoreUi</class>
+ <widget class="QWidget" name="StuScoreUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>650</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>650</width>
+    <height>400</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>学期：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="timeComBox">
+         <item>
+          <property name="text">
+           <string>全部</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大一上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大一下</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大二上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大二下</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大三上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大三下</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大四上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大四下</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>搜索科目：</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="checkEdit"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="checkBtn">
+         <property name="text">
+          <string>查询</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="returnBtn">
+         <property name="text">
+          <string>返回</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QTableWidget" name="table">
+       <column>
+        <property name="text">
+         <string>课程编号</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>课程名称</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>课程分数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>学分</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>学期</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>任课老师</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
