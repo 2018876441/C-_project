@@ -15,6 +15,10 @@ TeaUi::~TeaUi()
         delete m_teaCouMan;
         m_teaCouMan=nullptr;
     }
+    if(m_teaManSco){
+        delete m_teaManSco;
+        m_teaManSco=nullptr;
+    }
 }
 
 void TeaUi::setUser(QString user)
@@ -41,4 +45,30 @@ void TeaUi::showMessage()
     ui->sw->addWidget(m_teaCouMan);
     ui->sw->setCurrentWidget(m_teaCouMan);
     m_teaCouMan->initTableDate();
+
+    courseNameList=m_teaCouMan->getCourseName();
+    for(int i=0;i<courseNameList.size();i++){
+        ui->chose->addItem(courseNameList.at(i));
+    }
+
+
+    m_teaManSco=new teaManageScore();
+    ui->sw->addWidget(m_teaManSco);
+
+    connect(ui->manBtn,&QPushButton::clicked,this,[this](){
+        m_teaCouMan->setUser(this->user);
+        ui->sw->setCurrentWidget(m_teaCouMan);
+        m_teaCouMan->initTableDate();
+    });
+
+
+    connect(ui->ManScoBtn,&QPushButton::clicked,this,[this](){
+        if(ui->chose->currentText()=="未选"){
+            QMessageBox::information(nullptr,"提示","请选择一门科目，进行成绩管理");
+            return;
+        }
+        m_teaManSco->setCourseName(ui->chose->currentText());
+        ui->sw->setCurrentWidget(m_teaManSco);
+    });
+
 }

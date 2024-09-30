@@ -24,11 +24,13 @@ public:
     void initTableDate();
     void initTableTitle();
     void setUser(QString user);
+    QStringList getCourseName();
 
 
 private:
     Ui::TeaCourseManagement *ui;
     QString user;
+    QStringList courseNameList;
 };
 
 #endif // TEACOURSEMANAGEMENT_H

@@ -34,10 +34,9 @@ void TeaCourseManagement::initTableDate()
 {
     initTableTitle();
     QSqlQuery sql;
-    QString str="select * from course where teaId=?";
+    QString str="select courseId,course.name,credit,usertea.name from course left join usertea on course.teaId= usertea.TeaId where course.teaId=?";
     sql.prepare(str);
     sql.addBindValue(user.toInt());
-    qDebug()<<user;
     if(sql.exec()){
         int i=0;
         while(sql.next())
@@ -55,7 +54,7 @@ void TeaCourseManagement::initTableDate()
         }
     }
     else{
-        qDebug()<<"数据获取失败";
+        qDebug()<<"数据获取失败:"<<sql.lastError();
         return;
     }
 }
@@ -70,6 +69,25 @@ void TeaCourseManagement::initTableTitle()
 void TeaCourseManagement::setUser(QString user)
 {
     this->user=user;
+}
+
+QStringList TeaCourseManagement::getCourseName()
+{
+    QSqlQuery sql;
+    QString str="select distinct name from course where teaId=?";
+    sql.prepare(str);
+    sql.addBindValue(user.toInt());
+    if(!sql.exec()){
+        qDebug()<<"fails:"<<sql.lastError();
+        return courseNameList;
+    }
+    int i=0;
+    while(sql.next())
+    {
+        courseNameList<<sql.value(0).toString();
+        i++;
+    }
+    return courseNameList;
 }
 
 

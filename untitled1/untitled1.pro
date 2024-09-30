@@ -19,6 +19,7 @@ SOURCES += \
     stuscoreui.cpp \
     stuui.cpp \
     teacoursemanagement.cpp \
+    teamanagescore.cpp \
     teaui.cpp
 
 HEADERS += \
@@ -31,6 +32,7 @@ HEADERS += \
     stuscoreui.h \
     stuui.h \
     teacoursemanagement.h \
+    teamanagescore.h \
     teaui.h
 
 FORMS += \
@@ -42,6 +44,7 @@ FORMS += \
     stuscoreui.ui \
     stuui.ui \
     teacoursemanagement.ui \
+    teamanagescore.ui \
     teaui.ui
 
 # Default rules for deployment.

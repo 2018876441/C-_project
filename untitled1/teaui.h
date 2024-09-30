@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include "teacoursemanagement.h"
-
+#include "teamanagescore.h"
 
 namespace Ui {
 class TeaUi;
@@ -23,6 +23,8 @@ private:
     Ui::TeaUi *ui;
     TeaCourseManagement* m_teaCouMan;
     QString user;
+    teaManageScore* m_teaManSco;
+    QStringList courseNameList;
 };
 
 #endif // TEAUI_H

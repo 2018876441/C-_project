@@ -15,7 +15,7 @@ StuScoreUi::StuScoreUi(QWidget *parent)
         QSqlQuery sql;
         if(semester=="全部") initTableWidgetData();
         else{
-            QString str="select lessonId,lessonName,_score,credit,semester,teacher from score where Stuid = ? and semester = ?";
+            QString str="select lessonId,lessonName,_score,credit,semester,usertea.name from score left join usertea on score.teaId =usertea.TeaId where Stuid = ? and semester = ?";
             sql.prepare(str);
             sql.addBindValue(this->user.toInt());
             sql.addBindValue(semester);
@@ -55,7 +55,7 @@ StuScoreUi::StuScoreUi(QWidget *parent)
         ui->table->clear();
         initTableTitle();
         QSqlQuery sql;
-        QString str="select lessonId,lessonName,_score,credit,semester,teacher from score where Stuid = ? and lessonName = ?";
+        QString str="select lessonId,lessonName,_score,credit,semester,usertea.name from score left join usertea on score.teaId=usertea.TeaId where Stuid = ? and lessonName = ?";
         sql.prepare(str);
         sql.addBindValue(this->user.toInt());
         sql.addBindValue(className);
@@ -112,7 +112,7 @@ void StuScoreUi::initTableWidgetData()
     ui->table->clear();
     initTableTitle();
     QSqlQuery sql;
-    QString str="select lessonId,lessonName,_score,credit,semester,teacher from score where Stuid = ?";
+    QString str="select lessonId,lessonName,_score,credit,semester,usertea.name from score left join usertea on score.teaId=usertea.TeaId where Stuid = ?";
     sql.prepare(str);
     sql.addBindValue(this->user.toInt());
 
