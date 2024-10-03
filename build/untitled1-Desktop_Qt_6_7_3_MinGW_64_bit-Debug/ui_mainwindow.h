@@ -32,12 +32,15 @@ public:
         MainWindow->resize(300, 500);
         MainWindow->setMinimumSize(QSize(300, 500));
         MainWindow->setMaximumSize(QSize(300, 500));
+        MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        centralwidget->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
         sw = new QStackedWidget(centralwidget);
         sw->setObjectName("sw");
+        sw->setStyleSheet(QString::fromUtf8(""));
 
         verticalLayout->addWidget(sw);
 

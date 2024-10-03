@@ -58,6 +58,7 @@ public:
         LoginDialog->resize(300, 500);
         LoginDialog->setMinimumSize(QSize(300, 500));
         LoginDialog->setMaximumSize(QSize(300, 500));
+        LoginDialog->setStyleSheet(QString::fromUtf8("background-image: url(:/img/bg1.jpg);"));
         verticalLayout_2 = new QVBoxLayout(LoginDialog);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout = new QVBoxLayout();

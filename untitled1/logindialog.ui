@@ -25,6 +25,9 @@
   <property name="windowTitle">
    <string>登录界面</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/img/bg1.jpg);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
