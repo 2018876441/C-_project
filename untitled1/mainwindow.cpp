@@ -206,8 +206,8 @@ void MainWindow::checkLogin()
                 ui->sw->setCurrentWidget(m_teaui);
                 m_teaui->setUser(this->user);
                 m_teaui->showMessage();
-                setMaximumSize(600,500);
-                setMinimumSize(600,500);
+                setMaximumSize(1000,500);
+                setMinimumSize(1000,500);
             }
             else {
                 QMessageBox::information(nullptr,"提示","用户名或密码错误");

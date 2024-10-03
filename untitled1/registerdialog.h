@@ -17,8 +17,6 @@ public:
 
 signals:
     void stuRegSignal();
-    void teaRegSignal();
-    void nanRegSignal();
     void backSignal();
 
 private:

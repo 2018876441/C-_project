@@ -35,9 +35,6 @@ public:
     QPushButton *ManScoBtn;
     QLabel *label;
     QComboBox *chose;
-    QPushButton *addBtn;
-    QPushButton *modfiyBtn;
-    QPushButton *deleteBtn;
     QSpacerItem *verticalSpacer;
     QStackedWidget *sw;
 
@@ -45,9 +42,9 @@ public:
     {
         if (TeaUi->objectName().isEmpty())
             TeaUi->setObjectName("TeaUi");
-        TeaUi->resize(600, 500);
-        TeaUi->setMinimumSize(QSize(600, 500));
-        TeaUi->setMaximumSize(QSize(600, 500));
+        TeaUi->resize(1000, 500);
+        TeaUi->setMinimumSize(QSize(1000, 500));
+        TeaUi->setMaximumSize(QSize(1018, 500));
         horizontalLayout = new QHBoxLayout(TeaUi);
         horizontalLayout->setObjectName("horizontalLayout");
         verticalLayout = new QVBoxLayout();
@@ -96,27 +93,6 @@ public:
 
         verticalLayout->addWidget(chose);
 
-        addBtn = new QPushButton(TeaUi);
-        addBtn->setObjectName("addBtn");
-        addBtn->setMinimumSize(QSize(100, 30));
-        addBtn->setMaximumSize(QSize(100, 30));
-
-        verticalLayout->addWidget(addBtn);
-
-        modfiyBtn = new QPushButton(TeaUi);
-        modfiyBtn->setObjectName("modfiyBtn");
-        modfiyBtn->setMinimumSize(QSize(0, 30));
-        modfiyBtn->setMaximumSize(QSize(100, 16777215));
-
-        verticalLayout->addWidget(modfiyBtn);
-
-        deleteBtn = new QPushButton(TeaUi);
-        deleteBtn->setObjectName("deleteBtn");
-        deleteBtn->setMinimumSize(QSize(0, 30));
-        deleteBtn->setMaximumSize(QSize(100, 16777215));
-
-        verticalLayout->addWidget(deleteBtn);
-
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         verticalLayout->addItem(verticalSpacer);
@@ -126,7 +102,7 @@ public:
 
         sw = new QStackedWidget(TeaUi);
         sw->setObjectName("sw");
-        sw->setMinimumSize(QSize(450, 480));
+        sw->setMinimumSize(QSize(900, 480));
         sw->setMaximumSize(QSize(16777215, 480));
 
         horizontalLayout->addWidget(sw);
@@ -146,9 +122,6 @@ public:
         label->setText(QCoreApplication::translate("TeaUi", "\351\200\211\346\213\251\346\210\220\347\273\251\347\256\241\347\220\206\347\247\221\347\233\256\357\274\232", nullptr));
         chose->setItemText(0, QCoreApplication::translate("TeaUi", "\346\234\252\351\200\211", nullptr));
 
-        addBtn->setText(QCoreApplication::translate("TeaUi", "\346\226\260\345\242\236\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
-        modfiyBtn->setText(QCoreApplication::translate("TeaUi", "\344\277\256\346\224\271\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
-        deleteBtn->setText(QCoreApplication::translate("TeaUi", "\345\210\240\351\231\244\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
     } // retranslateUi
 
 };

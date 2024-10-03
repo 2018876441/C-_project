@@ -8,7 +8,6 @@ TeaCourseManagement::TeaCourseManagement(QWidget *parent)
     ui->setupUi(this);
     initTableshow();
     initTableDate();
-
 }
 
 TeaCourseManagement::~TeaCourseManagement()
@@ -19,14 +18,16 @@ TeaCourseManagement::~TeaCourseManagement()
 void TeaCourseManagement::initTableshow()
 {
     //设置表格控件100行6列
-    ui->table->setColumnCount(4);
+    ui->table->setColumnCount(5);
     ui->table->setRowCount(30);
     //设置表格控件字体大小
     ui->table->setFont(QFont("宋体",13));
 
 
     //设置表格列宽度
-    ui->table->setColumnWidth(0,80);
+    ui->table->setColumnWidth(0,60);
+    ui->table->setColumnWidth(1,150);
+    ui->table->setColumnWidth(6,150);
 
 }
 
@@ -34,7 +35,7 @@ void TeaCourseManagement::initTableDate()
 {
     initTableTitle();
     QSqlQuery sql;
-    QString str="select courseId,course.name,credit,usertea.name from course left join usertea on course.teaId= usertea.TeaId where course.teaId=?";
+    QString str="select c.courseId,c.name,c.credit,u.name from course_teacher as ct left join course as c on ct.course_id=c.courseId left join usertea as u on ct.teacher_id=u.TeaId where ct.teacher_id=?";
     sql.prepare(str);
     sql.addBindValue(user.toInt());
     if(sql.exec()){
@@ -63,7 +64,7 @@ void TeaCourseManagement::initTableTitle()
 {
     ui->table->clear();
     //设置表格控件标题
-    ui->table->setHorizontalHeaderLabels(QStringList()<<"课程编号"<<"课程名称"<<"学分"<<"课程老师");
+    ui->table->setHorizontalHeaderLabels(QStringList()<<"课程编号"<<"课程名称"<<"学分"<<"课程老师"<<"开课学院");
 }
 
 void TeaCourseManagement::setUser(QString user)
@@ -74,7 +75,7 @@ void TeaCourseManagement::setUser(QString user)
 QStringList TeaCourseManagement::getCourseName()
 {
     QSqlQuery sql;
-    QString str="select distinct name from course where teaId=?";
+    QString str="select c.name from course_teacher as ct left join course as c on ct.course_id=c.courseId where ct.teacher_id=?";
     sql.prepare(str);
     sql.addBindValue(user.toInt());
     if(!sql.exec()){

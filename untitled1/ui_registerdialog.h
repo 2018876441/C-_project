@@ -24,8 +24,6 @@ public:
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QPushButton *stuBtn;
-    QPushButton *teaBtn;
-    QPushButton *NanBtn;
     QPushButton *backBtn;
 
     void setupUi(QDialog *RegisterDialog)
@@ -48,18 +46,6 @@ public:
 
         verticalLayout->addWidget(stuBtn);
 
-        teaBtn = new QPushButton(layoutWidget);
-        teaBtn->setObjectName("teaBtn");
-        teaBtn->setMinimumSize(QSize(100, 50));
-
-        verticalLayout->addWidget(teaBtn);
-
-        NanBtn = new QPushButton(layoutWidget);
-        NanBtn->setObjectName("NanBtn");
-        NanBtn->setMinimumSize(QSize(100, 50));
-
-        verticalLayout->addWidget(NanBtn);
-
         backBtn = new QPushButton(layoutWidget);
         backBtn->setObjectName("backBtn");
         backBtn->setMinimumSize(QSize(100, 50));
@@ -76,8 +62,6 @@ public:
     {
         RegisterDialog->setWindowTitle(QCoreApplication::translate("RegisterDialog", "Dialog", nullptr));
         stuBtn->setText(QCoreApplication::translate("RegisterDialog", "\345\255\246\347\224\237\346\263\250\345\206\214", nullptr));
-        teaBtn->setText(QCoreApplication::translate("RegisterDialog", "\350\200\201\345\270\210\346\263\250\345\206\214", nullptr));
-        NanBtn->setText(QCoreApplication::translate("RegisterDialog", "\350\264\237\350\264\243\344\272\272\346\263\250\345\206\214", nullptr));
         backBtn->setText(QCoreApplication::translate("RegisterDialog", "\350\277\224\345\233\236", nullptr));
     } // retranslateUi
 

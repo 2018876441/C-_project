@@ -7,7 +7,7 @@ StuScoreUi::StuScoreUi(QWidget *parent)
 {
     ui->setupUi(this);
     initTableWidgetList();
-    //筛选学期
+    /*//筛选学期
     connect(ui->timeComBox,&QComboBox::currentTextChanged,this,[this](){
         ui->table->clear();
         initTableTitle();
@@ -43,7 +43,7 @@ StuScoreUi::StuScoreUi(QWidget *parent)
                 qDebug()<<"数据获取失败";
             }
         }
-    });
+    });*/
 
     connect(ui->checkBtn,&QPushButton::clicked,this,[this](){
         QString className=ui->checkEdit->text();
@@ -52,10 +52,10 @@ StuScoreUi::StuScoreUi(QWidget *parent)
             return;
         }
 
-        ui->table->clear();
+
         initTableTitle();
         QSqlQuery sql;
-        QString str="select lessonId,lessonName,_score,credit,semester,usertea.name from score left join usertea on score.teaId=usertea.TeaId where Stuid = ? and lessonName = ?";
+        QString str="SELECT c.courseId, c.name , sc._score, c.credit, t.name FROM course c LEFT JOIN score sc ON c.courseId = sc.scoreId LEFT JOIN course_teacher ct ON c.courseId = ct.course_id LEFT JOIN usertea t ON ct.teacher_id = t.TeaId join userstu s on sc.Stuid=s.StuId and s.StuId=? where c.name=?";
         sql.prepare(str);
         sql.addBindValue(this->user.toInt());
         sql.addBindValue(className);
@@ -67,15 +67,13 @@ StuScoreUi::StuScoreUi(QWidget *parent)
                 QString strName=sql.value(1).toString();
                 QString strSco=sql.value(2).toString();
                 QString strCredit=sql.value(3).toString();
-                QString strSemester=sql.value(4).toString();
-                QString strTeacher=sql.value(5).toString();
+                QString strTeacher=sql.value(4).toString();
 
                 ui->table->setItem(i,0,new QTableWidgetItem(strId));
                 ui->table->setItem(i,1,new QTableWidgetItem(strName));
                 ui->table->setItem(i,2,new QTableWidgetItem(strSco));
-                ui->table->setItem(i,3,new QTableWidgetItem(strCredit));
-                ui->table->setItem(i,4,new QTableWidgetItem(strSemester));
-                ui->table->setItem(i,5,new QTableWidgetItem(strTeacher));
+                ui->table->setItem(i,3,new QTableWidgetItem(strCredit));              
+                ui->table->setItem(i,4,new QTableWidgetItem(strTeacher));
                 i++;
             }
         }
@@ -96,23 +94,22 @@ void StuScoreUi::initTableWidgetList()
 {
 
     //设置表格控件100行6列
-    ui->table->setColumnCount(6);
+    ui->table->setColumnCount(5);
     ui->table->setRowCount(100);
     //设置表格控件字体大小
     ui->table->setFont(QFont("宋体",13));
 
 
     //设置表格列宽度
-    ui->table->setColumnWidth(0,80);
+    ui->table->setColumnWidth(1,200);
 
 }
 
 void StuScoreUi::initTableWidgetData()
 {
-    ui->table->clear();
     initTableTitle();
     QSqlQuery sql;
-    QString str="select lessonId,lessonName,_score,credit,semester,usertea.name from score left join usertea on score.teaId=usertea.TeaId where Stuid = ?";
+    QString str="SELECT c.courseId, c.name , sc._score, c.credit, t.name FROM course c LEFT JOIN score sc ON c.courseId = sc.scoreId LEFT JOIN course_teacher ct ON c.courseId = ct.course_id LEFT JOIN usertea t ON ct.teacher_id = t.TeaId join userstu s on sc.Stuid=s.StuId and s.StuId=?";
     sql.prepare(str);
     sql.addBindValue(this->user.toInt());
 
@@ -124,15 +121,13 @@ void StuScoreUi::initTableWidgetData()
             QString strName=sql.value(1).toString();
             QString strSco=sql.value(2).toString();
             QString strCredit=sql.value(3).toString();
-            QString strSemester=sql.value(4).toString();
-            QString strTeacher=sql.value(5).toString();
+            QString strTeacher=sql.value(4).toString();
 
             ui->table->setItem(i,0,new QTableWidgetItem(strId));
             ui->table->setItem(i,1,new QTableWidgetItem(strName));
             ui->table->setItem(i,2,new QTableWidgetItem(strSco));
             ui->table->setItem(i,3,new QTableWidgetItem(strCredit));
-            ui->table->setItem(i,4,new QTableWidgetItem(strSemester));
-            ui->table->setItem(i,5,new QTableWidgetItem(strTeacher));
+            ui->table->setItem(i,4,new QTableWidgetItem(strTeacher));
             i++;
         }
     }
@@ -144,7 +139,8 @@ void StuScoreUi::initTableWidgetData()
 void StuScoreUi::initTableTitle()
 {
     //设置表格控件标题
-    ui->table->setHorizontalHeaderLabels(QStringList()<<"课程编号"<<"课程名称"<<"课程分数"<<"学分"<<"学期"<<"课程老师");
+    ui->table->clear();
+    ui->table->setHorizontalHeaderLabels(QStringList()<<"课程编号"<<"课程名称"<<"课程分数"<<"学分"<<"课程老师");
 }
 
 void StuScoreUi::setUser(QString user)
@@ -155,5 +151,11 @@ void StuScoreUi::setUser(QString user)
 void StuScoreUi::on_returnBtn_clicked()
 {
     emit returnToStuUiSiganls();
+}
+
+
+void StuScoreUi::on_recover_clicked()
+{
+    initTableWidgetData();
 }
 

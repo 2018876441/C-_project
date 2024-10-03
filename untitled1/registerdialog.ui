@@ -55,32 +55,6 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="teaBtn">
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>老师注册</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="NanBtn">
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>50</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>负责人注册</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="backBtn">
       <property name="minimumSize">
        <size>

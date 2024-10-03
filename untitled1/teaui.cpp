@@ -69,6 +69,7 @@ void TeaUi::showMessage()
         }
         m_teaManSco->setCourseName(ui->chose->currentText());
         ui->sw->setCurrentWidget(m_teaManSco);
+        m_teaManSco->initTableDate();
     });
 
 }

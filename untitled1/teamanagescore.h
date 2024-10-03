@@ -21,6 +21,9 @@ public:
     ~teaManageScore();
     void setCourseName(QString name);
     void showMessage();
+    void initTableShow();
+    void initTableDate();
+    void setTableTitle();
 
 private:
     Ui::teaManageScore *ui;
