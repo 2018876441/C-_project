@@ -31,6 +31,8 @@ signals:
 private slots:
     void on_returnBtn_clicked();
 
+    void on_recover_clicked();
+
 private:
     Ui::StuScoreUi *ui;
     QString user;

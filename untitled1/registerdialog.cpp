@@ -7,8 +7,6 @@ RegisterDialog::RegisterDialog(QWidget *parent)
 {
     ui->setupUi(this);
     connect(ui->stuBtn,&QPushButton::clicked,this,&RegisterDialog::stuRegSignal);
-    connect(ui->teaBtn,&QPushButton::clicked,this,&RegisterDialog::teaRegSignal);
-    connect(ui->NanBtn,&QPushButton::clicked,this,&RegisterDialog::nanRegSignal);
     connect(ui->backBtn,&QPushButton::clicked,this,&RegisterDialog::backSignal);
 }
 

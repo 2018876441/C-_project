@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
+    <width>600</width>
     <height>480</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>450</width>
+    <width>600</width>
     <height>480</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>450</width>
+    <width>600</width>
     <height>480</height>
    </size>
   </property>
@@ -41,6 +41,11 @@
      <column>
       <property name="text">
        <string>学分</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>开课学院</string>
       </property>
      </column>
      <column>

@@ -29,67 +29,14 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QPushButton" name="recover">
          <property name="text">
-          <string>学期：</string>
+          <string>恢复</string>
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QComboBox" name="timeComBox">
-         <item>
-          <property name="text">
-           <string>全部</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大一上</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大一下</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大二上</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大二下</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大三上</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大三下</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大四上</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>大四下</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
@@ -140,11 +87,6 @@
        <column>
         <property name="text">
          <string>学分</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>学期</string>
         </property>
        </column>
        <column>

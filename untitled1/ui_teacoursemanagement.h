@@ -28,14 +28,14 @@ public:
     {
         if (TeaCourseManagement->objectName().isEmpty())
             TeaCourseManagement->setObjectName("TeaCourseManagement");
-        TeaCourseManagement->resize(450, 480);
-        TeaCourseManagement->setMinimumSize(QSize(450, 480));
-        TeaCourseManagement->setMaximumSize(QSize(450, 480));
+        TeaCourseManagement->resize(600, 480);
+        TeaCourseManagement->setMinimumSize(QSize(600, 480));
+        TeaCourseManagement->setMaximumSize(QSize(600, 480));
         verticalLayout = new QVBoxLayout(TeaCourseManagement);
         verticalLayout->setObjectName("verticalLayout");
         table = new QTableWidget(TeaCourseManagement);
-        if (table->columnCount() < 4)
-            table->setColumnCount(4);
+        if (table->columnCount() < 5)
+            table->setColumnCount(5);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         table->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -44,6 +44,8 @@ public:
         table->setHorizontalHeaderItem(2, __qtablewidgetitem2);
         QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
         table->setHorizontalHeaderItem(3, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        table->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         table->setObjectName("table");
 
         verticalLayout->addWidget(table);
@@ -64,7 +66,9 @@ public:
         QTableWidgetItem *___qtablewidgetitem2 = table->horizontalHeaderItem(2);
         ___qtablewidgetitem2->setText(QCoreApplication::translate("TeaCourseManagement", "\345\255\246\345\210\206", nullptr));
         QTableWidgetItem *___qtablewidgetitem3 = table->horizontalHeaderItem(3);
-        ___qtablewidgetitem3->setText(QCoreApplication::translate("TeaCourseManagement", "\346\216\210\350\257\276\350\200\201\345\270\210", nullptr));
+        ___qtablewidgetitem3->setText(QCoreApplication::translate("TeaCourseManagement", "\345\274\200\350\257\276\345\255\246\351\231\242", nullptr));
+        QTableWidgetItem *___qtablewidgetitem4 = table->horizontalHeaderItem(4);
+        ___qtablewidgetitem4->setText(QCoreApplication::translate("TeaCourseManagement", "\346\216\210\350\257\276\350\200\201\345\270\210", nullptr));
     } // retranslateUi
 
 };
