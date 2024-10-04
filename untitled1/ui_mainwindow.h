@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.2
+** Created by: Qt User Interface Compiler version 6.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -32,12 +32,15 @@ public:
         MainWindow->resize(300, 500);
         MainWindow->setMinimumSize(QSize(300, 500));
         MainWindow->setMaximumSize(QSize(300, 500));
+        MainWindow->setStyleSheet(QString::fromUtf8("background-image: url(:/img/bg-star.jpg);"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
+        centralwidget->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
         sw = new QStackedWidget(centralwidget);
         sw->setObjectName("sw");
+        sw->setStyleSheet(QString::fromUtf8(""));
 
         verticalLayout->addWidget(sw);
 

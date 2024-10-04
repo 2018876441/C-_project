@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>img/bg.jpg</file>
         <file>img/bg1.jpg</file>
+        <file>img/bg-star.jpg</file>
     </qresource>
 </RCC>

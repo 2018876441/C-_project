@@ -35,3 +35,9 @@ QString LoginDialog::getIdn()
     return ui->identityChose->currentText();
 }
 
+
+void LoginDialog::on_regBtn_2_released()
+{
+    QCoreApplication::quit();
+}
+
