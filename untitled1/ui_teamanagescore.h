@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'teamanagescore.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.2
+** Created by: Qt User Interface Compiler version 6.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -31,6 +31,7 @@ public:
         teaManageScore->resize(850, 478);
         teaManageScore->setMinimumSize(QSize(850, 0));
         teaManageScore->setMaximumSize(QSize(850, 480));
+        teaManageScore->setStyleSheet(QString::fromUtf8("border-image: url(:/img/bg.jpg);"));
         verticalLayout = new QVBoxLayout(teaManageScore);
         verticalLayout->setObjectName("verticalLayout");
         tableWidget = new QTableWidget(teaManageScore);

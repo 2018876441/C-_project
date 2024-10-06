@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'sturegisterdialog.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.2
+** Created by: Qt User Interface Compiler version 6.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -60,9 +60,12 @@ public:
             StuRegisterDialog->setObjectName("StuRegisterDialog");
         StuRegisterDialog->resize(300, 500);
         StuRegisterDialog->setMinimumSize(QSize(300, 500));
-        StuRegisterDialog->setMaximumSize(QSize(300, 500));
+        StuRegisterDialog->setMaximumSize(QSize(720, 1024));
+        StuRegisterDialog->setStyleSheet(QString::fromUtf8("QDialog{border-image: url(:/img/cnh.jpg);}\n"
+"QLineEdit{border-radius:6px;background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(255, 255, 255, 66), stop:1 rgba(235, 236, 236, 51));}"));
         verticalLayout = new QVBoxLayout(StuRegisterDialog);
         verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(21, -1, 21, -1);
         verticalSpacer = new QSpacerItem(20, 60, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);
 
         verticalLayout->addItem(verticalSpacer);
@@ -86,6 +89,8 @@ public:
 
         userEdit = new QLineEdit(StuRegisterDialog);
         userEdit->setObjectName("userEdit");
+        userEdit->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(255, 255, 255, 66), stop:1 rgba(235, 236, 236, 51));\n"
+"border-radius:6px;"));
 
         horizontalLayout->addWidget(userEdit);
 
@@ -101,6 +106,7 @@ public:
 
         nameEdit = new QLineEdit(StuRegisterDialog);
         nameEdit->setObjectName("nameEdit");
+        nameEdit->setStyleSheet(QString::fromUtf8("border-radius:6px;"));
 
         horizontalLayout_2->addWidget(nameEdit);
 
@@ -187,12 +193,16 @@ public:
         regBtn = new QPushButton(StuRegisterDialog);
         regBtn->setObjectName("regBtn");
         regBtn->setMinimumSize(QSize(50, 50));
+        regBtn->setStyleSheet(QString::fromUtf8("border-radius:8px;\n"
+"background-color: qlineargradient(spread:pad, x1:0.432, y1:0.0852273, x2:0.659727, y2:1, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(227, 166, 191, 246));"));
 
         verticalLayout_3->addWidget(regBtn);
 
         returnBtn = new QPushButton(StuRegisterDialog);
         returnBtn->setObjectName("returnBtn");
         returnBtn->setMinimumSize(QSize(50, 50));
+        returnBtn->setStyleSheet(QString::fromUtf8("border-radius:8px;\n"
+"background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(230, 195, 87, 182), stop:1 rgba(227, 149, 191, 197));"));
 
         verticalLayout_3->addWidget(returnBtn);
 

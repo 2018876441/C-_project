@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'teacoursemanagement.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.2
+** Created by: Qt User Interface Compiler version 6.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -31,6 +31,7 @@ public:
         TeaCourseManagement->resize(600, 480);
         TeaCourseManagement->setMinimumSize(QSize(600, 480));
         TeaCourseManagement->setMaximumSize(QSize(600, 480));
+        TeaCourseManagement->setStyleSheet(QString::fromUtf8("border-image: url(:/img/bg.jpg);"));
         verticalLayout = new QVBoxLayout(TeaCourseManagement);
         verticalLayout->setObjectName("verticalLayout");
         table = new QTableWidget(TeaCourseManagement);

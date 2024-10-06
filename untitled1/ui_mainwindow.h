@@ -31,8 +31,9 @@ public:
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(300, 500);
         MainWindow->setMinimumSize(QSize(300, 500));
-        MainWindow->setMaximumSize(QSize(300, 500));
-        MainWindow->setStyleSheet(QString::fromUtf8("background-image: url(:/img/bg-star.jpg);"));
+        MainWindow->setMaximumSize(QSize(720, 1024));
+        MainWindow->setStyleSheet(QString::fromUtf8("QDialog{\n"
+"	border-image: url(:/img/bg-star.jpg);}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         centralwidget->setStyleSheet(QString::fromUtf8(""));

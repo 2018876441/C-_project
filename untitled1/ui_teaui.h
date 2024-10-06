@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'teaui.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.2
+** Created by: Qt User Interface Compiler version 6.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -45,6 +45,9 @@ public:
         TeaUi->resize(1000, 500);
         TeaUi->setMinimumSize(QSize(1000, 500));
         TeaUi->setMaximumSize(QSize(1018, 500));
+        TeaUi->setStyleSheet(QString::fromUtf8("QPushButton{background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(215,177,225, 182), stop:1 rgba(244,198,232, 123));\n"
+"border-radius:6px;}Q\n"
+"border-image: url(:/img/jsyr.jpg);"));
         horizontalLayout = new QHBoxLayout(TeaUi);
         horizontalLayout->setObjectName("horizontalLayout");
         verticalLayout = new QVBoxLayout();
@@ -90,6 +93,8 @@ public:
         chose->setObjectName("chose");
         chose->setMinimumSize(QSize(100, 30));
         chose->setMaximumSize(QSize(100, 16777215));
+        chose->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(215,177,225, 182), stop:1 rgba(244,198,232, 123));\n"
+"border-radius:2px;"));
 
         verticalLayout->addWidget(chose);
 

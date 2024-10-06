@@ -3,5 +3,8 @@
         <file>img/bg.jpg</file>
         <file>img/bg1.jpg</file>
         <file>img/bg-star.jpg</file>
+        <file>img/cnb.jpg</file>
+        <file>img/cnh.jpg</file>
+        <file>img/jsyr.jpg</file>
     </qresource>
 </RCC>

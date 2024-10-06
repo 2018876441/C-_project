@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'stuscoreui.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.2
+** Created by: Qt User Interface Compiler version 6.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -40,9 +40,9 @@ public:
     {
         if (StuScoreUi->objectName().isEmpty())
             StuScoreUi->setObjectName("StuScoreUi");
-        StuScoreUi->resize(650, 400);
+        StuScoreUi->resize(700, 400);
         StuScoreUi->setMinimumSize(QSize(650, 400));
-        StuScoreUi->setMaximumSize(QSize(650, 400));
+        StuScoreUi->setMaximumSize(QSize(720, 1024));
         verticalLayout = new QVBoxLayout(StuScoreUi);
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
@@ -51,6 +51,14 @@ public:
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         recover = new QPushButton(StuScoreUi);
         recover->setObjectName("recover");
+        recover->setMinimumSize(QSize(60, 17));
+        QFont font;
+        font.setPointSize(10);
+        font.setBold(true);
+        font.setHintingPreference(QFont::PreferDefaultHinting);
+        recover->setFont(font);
+        recover->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(230, 195, 87, 182), stop:1 rgba(227, 149, 191, 197));\n"
+"border-radius:6px;"));
 
         horizontalLayout_4->addWidget(recover);
 
@@ -61,16 +69,24 @@ public:
 
         checkEdit = new QLineEdit(StuScoreUi);
         checkEdit->setObjectName("checkEdit");
+        checkEdit->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.177, x2:0.87, y2:0.766955, stop:0.00568182 rgba(66, 66, 66, 52), stop:1 rgba(88, 88, 88, 99));\n"
+"border-radius:6px;"));
 
         horizontalLayout_4->addWidget(checkEdit);
 
         checkBtn = new QPushButton(StuScoreUi);
         checkBtn->setObjectName("checkBtn");
+        checkBtn->setMinimumSize(QSize(60, 17));
+        checkBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.574, y1:0.710864, x2:0.182, y2:0, stop:0 rgba(108, 209, 81, 170), stop:1 rgba(227, 149, 191, 197));\n"
+"border-radius:6px;"));
 
         horizontalLayout_4->addWidget(checkBtn);
 
         returnBtn = new QPushButton(StuScoreUi);
         returnBtn->setObjectName("returnBtn");
+        returnBtn->setMinimumSize(QSize(60, 17));
+        returnBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.154, y1:0.0734545, x2:0.687637, y2:0.755773, stop:0 rgba(255, 138, 97, 145), stop:1 rgba(234, 25, 25, 158));\n"
+"border-radius:6px;"));
 
         horizontalLayout_4->addWidget(returnBtn);
 
@@ -96,6 +112,12 @@ public:
         QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
         table->setHorizontalHeaderItem(4, __qtablewidgetitem4);
         table->setObjectName("table");
+        table->setEnabled(true);
+        QFont font1;
+        font1.setPointSize(10);
+        font1.setBold(true);
+        table->setFont(font1);
+        table->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 31);"));
 
         horizontalLayout_2->addWidget(table);
 

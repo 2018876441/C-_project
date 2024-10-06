@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'stuui.ui'
 **
-** Created by: Qt User Interface Compiler version 6.7.2
+** Created by: Qt User Interface Compiler version 6.7.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -57,7 +57,14 @@ public:
             StuUi->setObjectName("StuUi");
         StuUi->resize(300, 500);
         StuUi->setMinimumSize(QSize(300, 500));
-        StuUi->setMaximumSize(QSize(300, 500));
+        StuUi->setMaximumSize(QSize(1024, 720));
+        StuUi->setStyleSheet(QString::fromUtf8("QDialog{border-image: url(:/img/cnh.jpg);}\n"
+"QLineEdit{border-radius:6px;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.812, y1:0.722909, x2:1, y2:0.835, stop:0.00568182 rgba(66, 66, 66, 172), stop:1 rgba(189, 175, 189, 131));}\n"
+"QPushButton{\n"
+"border-radius:6px;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(230, 195, 87, 182), stop:1 rgba(227, 149, 191, 197));\n"
+"}"));
         verticalLayout_2 = new QVBoxLayout(StuUi);
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);

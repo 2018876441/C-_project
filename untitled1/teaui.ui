@@ -25,6 +25,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(215,177,225, 182), stop:1 rgba(244,198,232, 123));
+border-radius:6px;}Q
+border-image: url(:/img/jsyr.jpg);</string>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -128,6 +133,10 @@
          <width>100</width>
          <height>16777215</height>
         </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(215,177,225, 182), stop:1 rgba(244,198,232, 123));
+border-radius:2px;</string>
        </property>
        <item>
         <property name="text">

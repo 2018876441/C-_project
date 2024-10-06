@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>650</width>
+    <width>700</width>
     <height>400</height>
    </rect>
   </property>
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>650</width>
-    <height>400</height>
+    <width>720</width>
+    <height>1024</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -32,6 +32,23 @@
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QPushButton" name="recover">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>17</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>true</bold>
+           <hintingpreference>PreferDefaultHinting</hintingpreference>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(230, 195, 87, 182), stop:1 rgba(227, 149, 191, 197));
+border-radius:6px;</string>
+         </property>
          <property name="text">
           <string>恢复</string>
          </property>
@@ -45,10 +62,25 @@
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="checkEdit"/>
+        <widget class="QLineEdit" name="checkEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.177, x2:0.87, y2:0.766955, stop:0.00568182 rgba(66, 66, 66, 52), stop:1 rgba(88, 88, 88, 99));
+border-radius:6px;</string>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QPushButton" name="checkBtn">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>17</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.574, y1:0.710864, x2:0.182, y2:0, stop:0 rgba(108, 209, 81, 170), stop:1 rgba(227, 149, 191, 197));
+border-radius:6px;</string>
+         </property>
          <property name="text">
           <string>查询</string>
          </property>
@@ -56,6 +88,16 @@
        </item>
        <item>
         <widget class="QPushButton" name="returnBtn">
+         <property name="minimumSize">
+          <size>
+           <width>60</width>
+           <height>17</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.154, y1:0.0734545, x2:0.687637, y2:0.755773, stop:0 rgba(255, 138, 97, 145), stop:1 rgba(234, 25, 25, 158));
+border-radius:6px;</string>
+         </property>
          <property name="text">
           <string>返回</string>
          </property>
@@ -69,6 +111,18 @@
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
       <widget class="QTableWidget" name="table">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255, 31);</string>
+       </property>
        <column>
         <property name="text">
          <string>课程编号</string>
