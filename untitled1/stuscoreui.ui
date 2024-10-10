@@ -31,27 +31,106 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QPushButton" name="recover">
+        <widget class="QComboBox" name="timeComBox">
          <property name="minimumSize">
           <size>
-           <width>60</width>
-           <height>17</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <bold>true</bold>
-           <hintingpreference>PreferDefaultHinting</hintingpreference>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(230, 195, 87, 182), stop:1 rgba(227, 149, 191, 197));
-border-radius:6px;</string>
-         </property>
-         <property name="text">
-          <string>恢复</string>
-         </property>
+         <item>
+          <property name="text">
+           <string>学期</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大一上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大一下</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大二上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大二下</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大三上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大三下</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大四上</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大四下</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="schoolYearComBox">
+         <item>
+          <property name="text">
+           <string>学年</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大一</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大二</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大三</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>大四</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="scoreComBox">
+         <item>
+          <property name="text">
+           <string>分数</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>升序</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>降序</string>
+          </property>
+         </item>
         </widget>
        </item>
        <item>
@@ -136,6 +215,11 @@ border-radius:6px;</string>
        <column>
         <property name="text">
          <string>课程分数</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>学期</string>
         </property>
        </column>
        <column>

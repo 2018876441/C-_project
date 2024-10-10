@@ -25,8 +25,6 @@ public:
     QString getPwd();
     QString getIdn();
 
-private slots:
-    void on_regBtn_2_released();
 
 private:
     Ui::LoginDialog *ui;
