@@ -58,7 +58,9 @@ public:
         StuModfiy->resize(300, 500);
         StuModfiy->setMinimumSize(QSize(300, 500));
         StuModfiy->setMaximumSize(QSize(720, 1024));
-        StuModfiy->setStyleSheet(QString::fromUtf8("\n"
+        StuModfiy->setStyleSheet(QString::fromUtf8("#frame {\n"
+"border-image: url(:/img/cnb.jpg);}\n"
+"\n"
 "QLineEdit{border-radius:6px;background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(255, 255, 255, 66), stop:1 rgba(235, 236, 236, 51));}"));
         gridLayout = new QGridLayout(StuModfiy);
         gridLayout->setObjectName("gridLayout");

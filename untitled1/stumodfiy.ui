@@ -26,7 +26,9 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">
+   <string notr="true">#frame {
+border-image: url(:/img/cnb.jpg);}
+
 QLineEdit{border-radius:6px;background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(255, 255, 255, 66), stop:1 rgba(235, 236, 236, 51));}</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
