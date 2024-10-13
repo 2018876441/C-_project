@@ -66,6 +66,11 @@
        <string>学生专业</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>授课学期</string>
+      </property>
+     </column>
     </widget>
    </item>
   </layout>

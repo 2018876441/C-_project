@@ -72,4 +72,9 @@ void TeaUi::showMessage()
         m_teaManSco->initTableDate();
     });
 
+    connect(ui->addBtn,&QPushButton::clicked,this,[this](){
+        teaAddSco addSco;
+        addSco.exec();
+    });
+
 }

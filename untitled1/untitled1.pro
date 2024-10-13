@@ -18,6 +18,7 @@ SOURCES += \
     sturegisterdialog.cpp \
     stuscoreui.cpp \
     stuui.cpp \
+    teaaddsco.cpp \
     teacoursemanagement.cpp \
     teamanagescore.cpp \
     teaui.cpp
@@ -31,6 +32,7 @@ HEADERS += \
     sturegisterdialog.h \
     stuscoreui.h \
     stuui.h \
+    teaaddsco.h \
     teacoursemanagement.h \
     teamanagescore.h \
     teaui.h
@@ -43,6 +45,7 @@ FORMS += \
     sturegisterdialog.ui \
     stuscoreui.ui \
     stuui.ui \
+    teaaddsco.ui \
     teacoursemanagement.ui \
     teamanagescore.ui \
     teaui.ui
