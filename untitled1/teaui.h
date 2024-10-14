@@ -4,6 +4,7 @@
 #include <QWidget>
 #include "teacoursemanagement.h"
 #include "teamanagescore.h"
+#include "teaaddsco.h"
 
 namespace Ui {
 class TeaUi;

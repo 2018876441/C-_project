@@ -69,6 +69,19 @@ StuModfiy::StuModfiy(QWidget *parent)
         }
         QMessageBox::information(nullptr,"提示","修改成功");
     });
+
+    connect(ui->confirmPwdBtn,&QPushButton::clicked,this,[this](){
+        QString pwd=ui->pwdEdit->text();
+        if(!pwd.isEmpty()){
+            QSqlQuery sql;
+            QString str="update userstu set password=? where StuId=?";
+            sql.prepare(str);
+            sql.addBindValue(pwd);
+            sql.addBindValue(user);
+            if(!sql.exec()) qDebug()<<"password fails";
+        }
+        QMessageBox::information(nullptr,"提示","修改密码成功");
+    });
 }
 
 StuModfiy::~StuModfiy()

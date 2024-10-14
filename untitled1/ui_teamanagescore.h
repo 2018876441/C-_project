@@ -35,8 +35,8 @@ public:
         verticalLayout = new QVBoxLayout(teaManageScore);
         verticalLayout->setObjectName("verticalLayout");
         tableWidget = new QTableWidget(teaManageScore);
-        if (tableWidget->columnCount() < 7)
-            tableWidget->setColumnCount(7);
+        if (tableWidget->columnCount() < 8)
+            tableWidget->setColumnCount(8);
         QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
@@ -51,6 +51,8 @@ public:
         tableWidget->setHorizontalHeaderItem(5, __qtablewidgetitem5);
         QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(6, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(7, __qtablewidgetitem7);
         tableWidget->setObjectName("tableWidget");
 
         verticalLayout->addWidget(tableWidget);
@@ -78,6 +80,8 @@ public:
         ___qtablewidgetitem5->setText(QCoreApplication::translate("teaManageScore", "\345\255\246\347\224\237\345\255\246\351\231\242", nullptr));
         QTableWidgetItem *___qtablewidgetitem6 = tableWidget->horizontalHeaderItem(6);
         ___qtablewidgetitem6->setText(QCoreApplication::translate("teaManageScore", "\345\255\246\347\224\237\344\270\223\344\270\232", nullptr));
+        QTableWidgetItem *___qtablewidgetitem7 = tableWidget->horizontalHeaderItem(7);
+        ___qtablewidgetitem7->setText(QCoreApplication::translate("teaManageScore", "\346\216\210\350\257\276\345\255\246\346\234\237", nullptr));
     } // retranslateUi
 
 };

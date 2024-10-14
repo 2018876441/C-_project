@@ -117,6 +117,18 @@ MainWindow::~MainWindow()
         delete m_stuSco;
         m_stuSco=nullptr;
     }
+    if(m_stuModfiy){
+        delete m_stuModfiy;
+        m_stuModfiy=nullptr;
+    }
+    if(dbManager){
+        delete dbManager;
+        dbManager=nullptr;
+    }
+    if(m_teaui){
+        delete m_teaui;
+        m_teaui=nullptr;
+    }
 
 }
 
