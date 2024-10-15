@@ -7,6 +7,7 @@ teaManageScore::teaManageScore(QWidget *parent)
 {
     ui->setupUi(this);
     initTableShow();
+
 }
 
 teaManageScore::~teaManageScore()
@@ -17,6 +18,11 @@ teaManageScore::~teaManageScore()
 void teaManageScore::setCourseName(QString name)
 {
     this->courseName=name;
+}
+
+void teaManageScore::setTeaId(QString teaId)
+{
+    this->teaId=teaId;
 }
 
 void teaManageScore::showMessage()
@@ -32,22 +38,25 @@ void teaManageScore::initTableShow()
     //设置表格控件字体大小
     ui->tableWidget->setFont(QFont("宋体",13));
 
-
     ui->tableWidget->setColumnWidth(4,150);
 
 }
 
 void teaManageScore::initTableDate()
 {
-    qDebug()<<courseName;
     setTableTitle();
     QSqlQuery sql;
-    QString str="select c.name,cs.stu_id,u.name,s._score,u.classId,u.college,u.major,s.term from course_stu as cs left join course as c on cs.course_id=c.courseId left join score as s on cs.course_id=s.lessonId left join userstu u on cs.stu_id=u.StuId where c.name=?";
+    QString str=R"(select c.name,cs.stu_id,u.name,s._score,u.classId,u.college,u.major,s.term
+    from course_stu as cs
+    left join course as c on cs.course_id=c.courseId
+    left join score as s on cs.course_id=s.lessonId and cs.stu_id=s.Stuid
+    left join userstu u on cs.stu_id=u.StuId
+    where c.name=? and cs.tea_id=?)";
     sql.prepare(str);
     sql.addBindValue(courseName);
+    sql.addBindValue(teaId.toInt());
     if(sql.exec()){
         int i=0;
-        qDebug()<<sql.size();
         while(sql.next())
         {
             QString strName=sql.value(0).toString();

@@ -20,6 +20,7 @@ public:
     explicit teaManageScore(QWidget *parent = nullptr);
     ~teaManageScore();
     void setCourseName(QString name);
+    void setTeaId(QString teaId);
     void showMessage();
     void initTableShow();
     void initTableDate();
@@ -28,6 +29,7 @@ public:
 private:
     Ui::teaManageScore *ui;
     QString courseName;
+    QString teaId;
 };
 
 #endif // TEAMANAGESCORE_H

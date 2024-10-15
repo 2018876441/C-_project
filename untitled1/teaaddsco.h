@@ -19,9 +19,11 @@ class teaAddSco : public QDialog
 public:
     explicit teaAddSco(QWidget *parent = nullptr);
     ~teaAddSco();
+    void setClassId(QString id);
 
 private:
     Ui::teaAddSco *ui;
+    QString classId;
 };
 
 #endif // TEAADDSCO_H

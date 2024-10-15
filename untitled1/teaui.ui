@@ -154,7 +154,7 @@ border-radius:2px;</string>
         </size>
        </property>
        <property name="text">
-        <string>添加学生成绩</string>
+        <string>录入学生成绩</string>
        </property>
       </widget>
      </item>
@@ -191,7 +191,7 @@ border-radius:2px;</string>
      <property name="minimumSize">
       <size>
        <width>900</width>
-       <height>480</height>
+       <height>479</height>
       </size>
      </property>
      <property name="maximumSize">
@@ -199,6 +199,9 @@ border-radius:2px;</string>
        <width>16777215</width>
        <height>480</height>
       </size>
+     </property>
+     <property name="cursor">
+      <cursorShape>ArrowCursor</cursorShape>
      </property>
     </widget>
    </item>

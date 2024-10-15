@@ -11,7 +11,10 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -22,6 +25,9 @@ class Ui_teaManageScore
 {
 public:
     QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QComboBox *comboBox;
+    QSpacerItem *horizontalSpacer;
     QTableWidget *tableWidget;
 
     void setupUi(QWidget *teaManageScore)
@@ -31,9 +37,32 @@ public:
         teaManageScore->resize(850, 478);
         teaManageScore->setMinimumSize(QSize(850, 0));
         teaManageScore->setMaximumSize(QSize(850, 480));
-        teaManageScore->setStyleSheet(QString::fromUtf8("border-image: url(:/img/bg.jpg);"));
+        teaManageScore->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(teaManageScore);
         verticalLayout->setObjectName("verticalLayout");
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(5);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(5, 5, 5, 5);
+        comboBox = new QComboBox(teaManageScore);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName("comboBox");
+        comboBox->setMinimumSize(QSize(100, 0));
+        comboBox->setMaximumSize(QSize(150, 16777215));
+
+        horizontalLayout->addWidget(comboBox);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
         tableWidget = new QTableWidget(teaManageScore);
         if (tableWidget->columnCount() < 8)
             tableWidget->setColumnCount(8);
@@ -54,6 +83,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(7, __qtablewidgetitem7);
         tableWidget->setObjectName("tableWidget");
+        tableWidget->setMinimumSize(QSize(150, 0));
 
         verticalLayout->addWidget(tableWidget);
 
@@ -66,6 +96,12 @@ public:
     void retranslateUi(QWidget *teaManageScore)
     {
         teaManageScore->setWindowTitle(QCoreApplication::translate("teaManageScore", "Form", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("teaManageScore", "\346\216\222\345\272\217", nullptr));
+        comboBox->setItemText(1, QCoreApplication::translate("teaManageScore", "\345\255\246\351\231\242", nullptr));
+        comboBox->setItemText(2, QCoreApplication::translate("teaManageScore", "\344\270\223\344\270\232", nullptr));
+        comboBox->setItemText(3, QCoreApplication::translate("teaManageScore", "\345\255\246\347\224\237\347\217\255\347\272\247", nullptr));
+        comboBox->setItemText(4, QCoreApplication::translate("teaManageScore", "\345\255\246\345\217\267", nullptr));
+
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("teaManageScore", "\350\257\276\347\250\213\345\220\215\347\247\260", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);

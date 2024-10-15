@@ -24,6 +24,7 @@ private:
     Ui::TeaUi *ui;
     TeaCourseManagement* m_teaCouMan;
     QString user;
+    QString classId;
     teaManageScore* m_teaManSco;
     QStringList courseNameList;
 };

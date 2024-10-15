@@ -141,7 +141,7 @@ public:
         label->setText(QCoreApplication::translate("TeaUi", "\351\200\211\346\213\251\346\210\220\347\273\251\347\256\241\347\220\206\347\247\221\347\233\256\357\274\232", nullptr));
         chose->setItemText(0, QCoreApplication::translate("TeaUi", "\346\234\252\351\200\211", nullptr));
 
-        addBtn->setText(QCoreApplication::translate("TeaUi", "\346\267\273\345\212\240\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
+        addBtn->setText(QCoreApplication::translate("TeaUi", "\345\275\225\345\205\245\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
         modfiyBtn->setText(QCoreApplication::translate("TeaUi", "\344\277\256\346\224\271\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
     } // retranslateUi
 

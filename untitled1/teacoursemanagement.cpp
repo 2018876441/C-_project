@@ -35,7 +35,11 @@ void TeaCourseManagement::initTableDate()
 {
     initTableTitle();
     QSqlQuery sql;
-    QString str="select c.courseId,c.name,c.credit,u.name from course_teacher as ct left join course as c on ct.course_id=c.courseId left join usertea as u on ct.teacher_id=u.TeaId where ct.teacher_id=?";
+    QString str=R"(select c.courseId,c.name,c.credit,u.name
+                    from course_stu as cs
+                        left join course as c on cs.course_id=c.courseId
+                        left join usertea as u on cs.tea_id=u.TeaId
+                    where cs.tea_id=? group by c.courseId)";
     sql.prepare(str);
     sql.addBindValue(user.toInt());
     if(sql.exec()){

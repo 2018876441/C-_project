@@ -68,12 +68,19 @@ void TeaUi::showMessage()
             return;
         }
         m_teaManSco->setCourseName(ui->chose->currentText());
+        this->classId=ui->chose->currentText();
+        m_teaManSco->setTeaId(this->user);
         ui->sw->setCurrentWidget(m_teaManSco);
         m_teaManSco->initTableDate();
     });
 
     connect(ui->addBtn,&QPushButton::clicked,this,[this](){
+        if(ui->sw->currentWidget()!=m_teaManSco){
+            QMessageBox::information(nullptr,"提示","请进入成绩管理界面");
+            return;
+        }
         teaAddSco addSco;
+        addSco.setClassId(this->classId);
         addSco.exec();
     });
 

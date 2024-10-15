@@ -27,8 +27,6 @@ public:
     QVBoxLayout *verticalLayout;
     QLabel *label;
     QFormLayout *formLayout;
-    QLabel *Label;
-    QLineEdit *classEdit;
     QLabel *Label_2;
     QLineEdit *stuIdEdit;
     QLabel *Label_4;
@@ -54,45 +52,35 @@ public:
 
         formLayout = new QFormLayout();
         formLayout->setObjectName("formLayout");
-        Label = new QLabel(teaAddSco);
-        Label->setObjectName("Label");
-
-        formLayout->setWidget(0, QFormLayout::LabelRole, Label);
-
-        classEdit = new QLineEdit(teaAddSco);
-        classEdit->setObjectName("classEdit");
-
-        formLayout->setWidget(0, QFormLayout::FieldRole, classEdit);
-
         Label_2 = new QLabel(teaAddSco);
         Label_2->setObjectName("Label_2");
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, Label_2);
+        formLayout->setWidget(0, QFormLayout::LabelRole, Label_2);
 
         stuIdEdit = new QLineEdit(teaAddSco);
         stuIdEdit->setObjectName("stuIdEdit");
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, stuIdEdit);
+        formLayout->setWidget(0, QFormLayout::FieldRole, stuIdEdit);
 
         Label_4 = new QLabel(teaAddSco);
         Label_4->setObjectName("Label_4");
 
-        formLayout->setWidget(2, QFormLayout::LabelRole, Label_4);
+        formLayout->setWidget(1, QFormLayout::LabelRole, Label_4);
 
         ScoEdit = new QLineEdit(teaAddSco);
         ScoEdit->setObjectName("ScoEdit");
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, ScoEdit);
+        formLayout->setWidget(1, QFormLayout::FieldRole, ScoEdit);
 
         Label_3 = new QLabel(teaAddSco);
         Label_3->setObjectName("Label_3");
 
-        formLayout->setWidget(3, QFormLayout::LabelRole, Label_3);
+        formLayout->setWidget(2, QFormLayout::LabelRole, Label_3);
 
         termEdit = new QLineEdit(teaAddSco);
         termEdit->setObjectName("termEdit");
 
-        formLayout->setWidget(3, QFormLayout::FieldRole, termEdit);
+        formLayout->setWidget(2, QFormLayout::FieldRole, termEdit);
 
 
         verticalLayout->addLayout(formLayout);
@@ -114,7 +102,6 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        QWidget::setTabOrder(classEdit, stuIdEdit);
         QWidget::setTabOrder(stuIdEdit, ScoEdit);
         QWidget::setTabOrder(ScoEdit, termEdit);
         QWidget::setTabOrder(termEdit, checkBtn);
@@ -129,7 +116,6 @@ public:
     {
         teaAddSco->setWindowTitle(QCoreApplication::translate("teaAddSco", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("teaAddSco", "\346\267\273\345\212\240\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
-        Label->setText(QCoreApplication::translate("teaAddSco", "\350\257\276\347\250\213\345\220\215\347\247\260", nullptr));
         Label_2->setText(QCoreApplication::translate("teaAddSco", "\345\255\246\347\224\237\345\255\246\345\217\267", nullptr));
         Label_4->setText(QCoreApplication::translate("teaAddSco", "\345\255\246\347\224\237\345\210\206\346\225\260", nullptr));
         Label_3->setText(QCoreApplication::translate("teaAddSco", "\345\274\200\350\257\276\345\255\246\346\234\237", nullptr));
