@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->sw->setCurrentWidget(m_login);
 
+
     //主界面的跳转
     //主界面切换到注册界面
     connect(m_login,&LoginDialog::registerLoingSignal,this,[this](){
@@ -41,8 +42,6 @@ MainWindow::MainWindow(QWidget *parent)
     });
     //主界面切换到对应界面
     connect(m_login,&LoginDialog::loginSignal,this,[this](){
-        //ui->sw->setCurrentWidget(m_stuui);
-       // m_stuui->showMessage();
         checkLogin();
     });
 
@@ -53,8 +52,6 @@ MainWindow::MainWindow(QWidget *parent)
         ui->sw->setCurrentWidget(m_stuSco);
         m_stuSco->setUser(this->user);
         m_stuSco->initTableWidgetData();
-        setMaximumSize(650,400);
-        setMinimumSize(650,400);
     });
     //学生界面切换到修改信息界面
     connect(m_stuui,&StuUi::modifyInformationSignal,this,[this](){
@@ -71,8 +68,6 @@ MainWindow::MainWindow(QWidget *parent)
     //查看成绩界面切换到学生界面
     connect(m_stuSco,&StuScoreUi::returnToStuUiSiganls,this,[this](){
         ui->sw->setCurrentWidget(m_stuui);
-        setMaximumSize(300,500);
-        setMinimumSize(300,500);
     });
 
     //老师界面的切换
@@ -132,39 +127,6 @@ MainWindow::~MainWindow()
 
 }
 
-void MainWindow::connectMysql()
-{
-    //cyh数据库QODBC
-    /*QSqlDatabase db=QSqlDatabase::addDatabase("QODBC");
-    db.setHostName("123.207.61.105");//控制面板odbc数据源配置IP保存一致
-    db.setPort(3306); //此端口号为：MySQL数据库安装时设置端口编号
-    db.setDatabaseName("stusyscyh"); //odbc数据源配置的名称
-    db.setPassword("123456");//这个口令密码为：安装MySQL数据库时设置的密码
-
-    bool bok=db.open();//打开数据库
-    if(!bok) //加！，失败才会弹出
-    {
-        QMessageBox::information(nullptr,"提示","MySQL数据库连接失败！");
-        return;
-    }*/
-
-    /*//QMYSQL
-    QSqlDatabase db=QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("123.207.61.105");
-    db.setPort(3306);
-    db.setDatabaseName("stuscosys");
-    db.setUserName("ZJH");
-    db.setPassword("123456");
-    bool bok=db.open();
-    if(!bok) //加！，失败才会弹出
-    {
-        QMessageBox::information(nullptr,"提示","MySQL数据库连接失败！");
-        return;
-    }*/
-
-
-
-}
 
 void MainWindow::checkLogin()
 {
@@ -218,8 +180,7 @@ void MainWindow::checkLogin()
                 ui->sw->setCurrentWidget(m_teaui);
                 m_teaui->setUser(this->user);
                 m_teaui->showMessage();
-                setMaximumSize(1000,500);
-                setMinimumSize(1000,500);
+                resize(m_teaui->returnSize());
             }
             else {
                 QMessageBox::information(nullptr,"提示","用户名或密码错误");

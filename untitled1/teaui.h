@@ -5,6 +5,7 @@
 #include "teacoursemanagement.h"
 #include "teamanagescore.h"
 #include "teaaddsco.h"
+#include "teamodfiysco.h"
 
 namespace Ui {
 class TeaUi;
@@ -19,6 +20,7 @@ public:
     ~TeaUi();
     void setUser(QString user);
     void showMessage();
+    QSize returnSize();
 
 private:
     Ui::TeaUi *ui;

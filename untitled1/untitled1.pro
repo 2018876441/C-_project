@@ -21,6 +21,7 @@ SOURCES += \
     teaaddsco.cpp \
     teacoursemanagement.cpp \
     teamanagescore.cpp \
+    teamodfiysco.cpp \
     teaui.cpp
 
 HEADERS += \
@@ -35,6 +36,7 @@ HEADERS += \
     teaaddsco.h \
     teacoursemanagement.h \
     teamanagescore.h \
+    teamodfiysco.h \
     teaui.h
 
 FORMS += \
@@ -48,6 +50,7 @@ FORMS += \
     teaaddsco.ui \
     teacoursemanagement.ui \
     teamanagescore.ui \
+    teamodfiysco.ui \
     teaui.ui
 
 # Default rules for deployment.

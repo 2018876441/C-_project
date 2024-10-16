@@ -28,10 +28,8 @@ public:
     {
         if (TeaCourseManagement->objectName().isEmpty())
             TeaCourseManagement->setObjectName("TeaCourseManagement");
-        TeaCourseManagement->resize(600, 480);
-        TeaCourseManagement->setMinimumSize(QSize(600, 480));
-        TeaCourseManagement->setMaximumSize(QSize(600, 480));
-        TeaCourseManagement->setStyleSheet(QString::fromUtf8("border-image: url(:/img/bg.jpg);"));
+        TeaCourseManagement->resize(479, 424);
+        TeaCourseManagement->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(TeaCourseManagement);
         verticalLayout->setObjectName("verticalLayout");
         table = new QTableWidget(TeaCourseManagement);

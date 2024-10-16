@@ -44,8 +44,6 @@ public:
         if (StuScoreUi->objectName().isEmpty())
             StuScoreUi->setObjectName("StuScoreUi");
         StuScoreUi->resize(700, 400);
-        StuScoreUi->setMinimumSize(QSize(650, 400));
-        StuScoreUi->setMaximumSize(QSize(720, 1024));
         verticalLayout = new QVBoxLayout(StuScoreUi);
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();

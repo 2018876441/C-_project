@@ -56,8 +56,6 @@ public:
         if (StuUi->objectName().isEmpty())
             StuUi->setObjectName("StuUi");
         StuUi->resize(300, 500);
-        StuUi->setMinimumSize(QSize(300, 500));
-        StuUi->setMaximumSize(QSize(1024, 720));
         StuUi->setStyleSheet(QString::fromUtf8("QDialog{border-image: url(:/img/cnh.jpg);}\n"
 "QLineEdit{border-radius:6px;\n"
 "	background-color: qlineargradient(spread:pad, x1:0.812, y1:0.722909, x2:1, y2:0.835, stop:0.00568182 rgba(66, 66, 66, 172), stop:1 rgba(189, 175, 189, 131));}\n"

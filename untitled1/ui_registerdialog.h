@@ -14,14 +14,13 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_RegisterDialog
 {
 public:
-    QWidget *layoutWidget;
+    QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QPushButton *stuBtn;
     QPushButton *backBtn;
@@ -31,18 +30,13 @@ public:
         if (RegisterDialog->objectName().isEmpty())
             RegisterDialog->setObjectName("RegisterDialog");
         RegisterDialog->resize(300, 500);
-        RegisterDialog->setMinimumSize(QSize(300, 500));
-        RegisterDialog->setMaximumSize(QSize(720, 1024));
         RegisterDialog->setStyleSheet(QString::fromUtf8("QDialog{\n"
 "border-image: url(:/img/bg1.jpg);}"));
-        layoutWidget = new QWidget(RegisterDialog);
-        layoutWidget->setObjectName("layoutWidget");
-        layoutWidget->setGeometry(QRect(70, 120, 161, 261));
-        layoutWidget->setMinimumSize(QSize(100, 50));
-        verticalLayout = new QVBoxLayout(layoutWidget);
+        verticalLayout_2 = new QVBoxLayout(RegisterDialog);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        stuBtn = new QPushButton(layoutWidget);
+        stuBtn = new QPushButton(RegisterDialog);
         stuBtn->setObjectName("stuBtn");
         stuBtn->setMinimumSize(QSize(100, 50));
         QFont font;
@@ -55,13 +49,16 @@ public:
 
         verticalLayout->addWidget(stuBtn);
 
-        backBtn = new QPushButton(layoutWidget);
+        backBtn = new QPushButton(RegisterDialog);
         backBtn->setObjectName("backBtn");
         backBtn->setMinimumSize(QSize(100, 50));
         backBtn->setFont(font);
         backBtn->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.154, y1:0.0734545, x2:0.687637, y2:0.755773, stop:0 rgba(255, 138, 97, 145), stop:1 rgba(234, 25, 25, 158));"));
 
         verticalLayout->addWidget(backBtn);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
 
 
         retranslateUi(RegisterDialog);

@@ -57,8 +57,6 @@ public:
         if (StuModfiy->objectName().isEmpty())
             StuModfiy->setObjectName("StuModfiy");
         StuModfiy->resize(300, 500);
-        StuModfiy->setMinimumSize(QSize(300, 500));
-        StuModfiy->setMaximumSize(QSize(720, 1024));
         StuModfiy->setStyleSheet(QString::fromUtf8("#frame {\n"
 "border-image: url(:/img/cnb.jpg);}\n"
 "\n"

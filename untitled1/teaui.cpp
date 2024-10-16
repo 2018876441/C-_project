@@ -55,16 +55,19 @@ void TeaUi::showMessage()
     m_teaManSco=new teaManageScore();
     ui->sw->addWidget(m_teaManSco);
 
-    connect(ui->manBtn,&QPushButton::clicked,this,[this](){
+    /*connect(ui->manBtn,&QPushButton::clicked,this,[this](){
         m_teaCouMan->setUser(this->user);
         ui->sw->setCurrentWidget(m_teaCouMan);
         m_teaCouMan->initTableDate();
-    });
+    });*/
 
 
-    connect(ui->ManScoBtn,&QPushButton::clicked,this,[this](){
+    connect(ui->chose,&QComboBox::currentTextChanged,this,[this](){
         if(ui->chose->currentText()=="未选"){
-            QMessageBox::information(nullptr,"提示","请选择一门科目，进行成绩管理");
+            //QMessageBox::information(nullptr,"提示","请选择一门科目，进行成绩管理");
+            m_teaCouMan->setUser(this->user);
+            ui->sw->setCurrentWidget(m_teaCouMan);
+            m_teaCouMan->initTableDate();
             return;
         }
         m_teaManSco->setCourseName(ui->chose->currentText());
@@ -74,6 +77,7 @@ void TeaUi::showMessage()
         m_teaManSco->initTableDate();
     });
 
+    //进入添加成绩界面
     connect(ui->addBtn,&QPushButton::clicked,this,[this](){
         if(ui->sw->currentWidget()!=m_teaManSco){
             QMessageBox::information(nullptr,"提示","请进入成绩管理界面");
@@ -84,4 +88,22 @@ void TeaUi::showMessage()
         addSco.exec();
     });
 
+    connect(ui->modfiyBtn,&QPushButton::clicked,this,[this](){
+        if(ui->sw->currentWidget()!=m_teaManSco){
+            QMessageBox::information(nullptr,"提示","请进入成绩管理界面");
+            return;
+        }
+        teaModfiySco modSco;
+        modSco.setClassId(this->classId);
+        modSco.exec();
+    });
 }
+
+QSize TeaUi::returnSize()
+{
+    int h=this->height();
+    int w=this->width();
+    return QSize(w,h);
+}
+
+

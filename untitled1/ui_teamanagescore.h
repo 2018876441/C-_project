@@ -34,9 +34,7 @@ public:
     {
         if (teaManageScore->objectName().isEmpty())
             teaManageScore->setObjectName("teaManageScore");
-        teaManageScore->resize(850, 478);
-        teaManageScore->setMinimumSize(QSize(850, 0));
-        teaManageScore->setMaximumSize(QSize(850, 480));
+        teaManageScore->resize(615, 377);
         teaManageScore->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(teaManageScore);
         verticalLayout->setObjectName("verticalLayout");

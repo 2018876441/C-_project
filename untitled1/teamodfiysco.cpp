@@ -1,16 +1,13 @@
-#include "teaaddsco.h"
-#include "ui_teaaddsco.h"
-#include <QMessageBox>
+#include "teamodfiysco.h"
+#include "ui_teamodfiysco.h"
 
-teaAddSco::teaAddSco(QWidget *parent)
+teaModfiySco::teaModfiySco(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::teaAddSco)
+    , ui(new Ui::teaModfiySco)
 {
     ui->setupUi(this);
-    setWindowTitle("添加学生成绩");
-
+    setWindowTitle("修改学生成绩");
     connect(ui->checkBtn,&QPushButton::clicked,this,[this](){
-
         QSqlQuery sql;
         QString str="select courseId from course where name=?";
         sql.prepare(str);
@@ -20,27 +17,17 @@ teaAddSco::teaAddSco(QWidget *parent)
         while(sql.next()){
             cId=sql.value(0).toInt();
         }
-        QString stuId=ui->stuIdEdit->text();
-        QString stuSco=ui->ScoEdit->text();
+        QString stuId=ui->idEdit->text();
+        QString stuSco=ui->scoEdit->text();
         QString stuTerm=ui->termBox->currentText();
-
-        str="select * from course_stu where stu_id=? and course_id=?";
-        sql.prepare(str);
-        sql.addBindValue(stuId);
-        sql.addBindValue(cId);
-        sql.exec();
-        if(sql.size()==0){
-            QMessageBox::information(nullptr,"提示","没有该学生对应的成绩添加");
-            return;
-        }
 
         str="select * from score where Stuid=? and lessonId=?";
         sql.prepare(str);
         sql.addBindValue(stuId);
         sql.addBindValue(cId);
         sql.exec();
-        if(!sql.size()==0){
-            QMessageBox::information(nullptr,"提示","该学生的成绩已经添加");
+        if(sql.size()==0){
+            QMessageBox::information(nullptr,"提示","该学生的成绩未录入成功");
             return;
         }
 
@@ -57,14 +44,15 @@ teaAddSco::teaAddSco(QWidget *parent)
             return;
         }
 
-        str="insert into score (Stuid,_score,lessonId,term) values (?,?,?,?)";
+        str="update score set _score=?,term=? where Stuid=? and lessonId=?";
         sql.prepare(str);
-        sql.addBindValue(stuId.toInt());
         sql.addBindValue(stuSco.toInt());
-        sql.addBindValue(cId);
         sql.addBindValue(stuTerm);
+        sql.addBindValue(stuId.toInt());
+        sql.addBindValue(cId);
+
         if(!sql.exec()){
-            qDebug()<<"插入失败："<<sql.lastError();
+            qDebug()<<"修改失败："<<sql.lastError();
         }
 
         this->accept();
@@ -74,12 +62,12 @@ teaAddSco::teaAddSco(QWidget *parent)
     });
 }
 
-teaAddSco::~teaAddSco()
+teaModfiySco::~teaModfiySco()
 {
     delete ui;
 }
 
-void teaAddSco::setClassId(QString id)
+void teaModfiySco::setClassId(QString id)
 {
     this->classId=id;
 }

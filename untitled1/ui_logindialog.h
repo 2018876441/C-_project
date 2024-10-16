@@ -54,9 +54,7 @@ public:
     {
         if (LoginDialog->objectName().isEmpty())
             LoginDialog->setObjectName("LoginDialog");
-        LoginDialog->resize(300, 500);
-        LoginDialog->setMinimumSize(QSize(300, 500));
-        LoginDialog->setMaximumSize(QSize(720, 1024));
+        LoginDialog->resize(332, 448);
         LoginDialog->setStyleSheet(QString::fromUtf8("QPushButton\n"
 " {\n"
 "	border-radius:9px;\n"
@@ -256,7 +254,7 @@ public:
         identityChose->setItemText(2, QCoreApplication::translate("LoginDialog", "\350\264\237\350\264\243\344\272\272", nullptr));
 
         label_2->setText(QCoreApplication::translate("LoginDialog", "\345\257\206\347\240\201\357\274\232", nullptr));
-        user_label->setText(QCoreApplication::translate("LoginDialog", "\347\224\250\346\210\267:", nullptr));
+        user_label->setText(QCoreApplication::translate("LoginDialog", "\347\224\250\346\210\267\357\274\232", nullptr));
         label->setText(QCoreApplication::translate("LoginDialog", "\345\255\246\347\224\237\347\256\241\347\220\206\347\263\273\347\273\237\347\231\273\345\275\225\347\225\214\351\235\242", nullptr));
         loginBtn->setText(QCoreApplication::translate("LoginDialog", "\347\231\273\345\275\225", nullptr));
         regBtn->setText(QCoreApplication::translate("LoginDialog", "\346\263\250\345\206\214", nullptr));

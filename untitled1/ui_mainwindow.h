@@ -11,9 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QStackedWidget>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -22,28 +22,26 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
     QStackedWidget *sw;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(300, 500);
-        MainWindow->setMinimumSize(QSize(300, 500));
-        MainWindow->setMaximumSize(QSize(720, 1024));
+        MainWindow->resize(16, 16);
         MainWindow->setStyleSheet(QString::fromUtf8("QDialog{\n"
 "	border-image: url(:/img/bg-star.jpg);}"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         centralwidget->setStyleSheet(QString::fromUtf8(""));
-        verticalLayout = new QVBoxLayout(centralwidget);
-        verticalLayout->setObjectName("verticalLayout");
+        horizontalLayout = new QHBoxLayout(centralwidget);
+        horizontalLayout->setObjectName("horizontalLayout");
         sw = new QStackedWidget(centralwidget);
         sw->setObjectName("sw");
         sw->setStyleSheet(QString::fromUtf8(""));
 
-        verticalLayout->addWidget(sw);
+        horizontalLayout->addWidget(sw);
 
         MainWindow->setCentralWidget(centralwidget);
 

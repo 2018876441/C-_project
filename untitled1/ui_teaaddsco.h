@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -32,7 +33,7 @@ public:
     QLabel *Label_4;
     QLineEdit *ScoEdit;
     QLabel *Label_3;
-    QLineEdit *termEdit;
+    QComboBox *termBox;
     QHBoxLayout *horizontalLayout;
     QPushButton *checkBtn;
     QPushButton *exitBtn;
@@ -77,10 +78,18 @@ public:
 
         formLayout->setWidget(2, QFormLayout::LabelRole, Label_3);
 
-        termEdit = new QLineEdit(teaAddSco);
-        termEdit->setObjectName("termEdit");
+        termBox = new QComboBox(teaAddSco);
+        termBox->addItem(QString());
+        termBox->addItem(QString());
+        termBox->addItem(QString());
+        termBox->addItem(QString());
+        termBox->addItem(QString());
+        termBox->addItem(QString());
+        termBox->addItem(QString());
+        termBox->addItem(QString());
+        termBox->setObjectName("termBox");
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, termEdit);
+        formLayout->setWidget(2, QFormLayout::FieldRole, termBox);
 
 
         verticalLayout->addLayout(formLayout);
@@ -103,8 +112,7 @@ public:
         verticalLayout->addLayout(horizontalLayout);
 
         QWidget::setTabOrder(stuIdEdit, ScoEdit);
-        QWidget::setTabOrder(ScoEdit, termEdit);
-        QWidget::setTabOrder(termEdit, checkBtn);
+        QWidget::setTabOrder(ScoEdit, checkBtn);
         QWidget::setTabOrder(checkBtn, exitBtn);
 
         retranslateUi(teaAddSco);
@@ -119,6 +127,15 @@ public:
         Label_2->setText(QCoreApplication::translate("teaAddSco", "\345\255\246\347\224\237\345\255\246\345\217\267", nullptr));
         Label_4->setText(QCoreApplication::translate("teaAddSco", "\345\255\246\347\224\237\345\210\206\346\225\260", nullptr));
         Label_3->setText(QCoreApplication::translate("teaAddSco", "\345\274\200\350\257\276\345\255\246\346\234\237", nullptr));
+        termBox->setItemText(0, QCoreApplication::translate("teaAddSco", "\345\244\247\344\270\200\344\270\212", nullptr));
+        termBox->setItemText(1, QCoreApplication::translate("teaAddSco", "\345\244\247\344\270\200\344\270\213", nullptr));
+        termBox->setItemText(2, QCoreApplication::translate("teaAddSco", "\345\244\247\344\272\214\344\270\212", nullptr));
+        termBox->setItemText(3, QCoreApplication::translate("teaAddSco", "\345\244\247\344\272\214\344\270\213", nullptr));
+        termBox->setItemText(4, QCoreApplication::translate("teaAddSco", "\345\244\247\344\270\211\344\270\212", nullptr));
+        termBox->setItemText(5, QCoreApplication::translate("teaAddSco", "\345\244\247\344\270\211\344\270\213", nullptr));
+        termBox->setItemText(6, QCoreApplication::translate("teaAddSco", "\345\244\247\345\233\233\344\270\212", nullptr));
+        termBox->setItemText(7, QCoreApplication::translate("teaAddSco", "\345\244\247\345\233\233\344\270\213", nullptr));
+
         checkBtn->setText(QCoreApplication::translate("teaAddSco", "\346\267\273\345\212\240", nullptr));
         exitBtn->setText(QCoreApplication::translate("teaAddSco", "\345\217\226\346\266\210", nullptr));
     } // retranslateUi
