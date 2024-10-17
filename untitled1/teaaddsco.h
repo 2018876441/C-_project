@@ -21,6 +21,8 @@ public:
     ~teaAddSco();
     void setClassId(QString id);
 
+signals:
+    void refurbishSignal();
 private:
     Ui::teaAddSco *ui;
     QString classId;

@@ -27,6 +27,9 @@ MainWindow::MainWindow(QWidget *parent)
     m_teaui=new TeaUi();
     ui->sw->addWidget(m_teaui);
 
+    m_adminui=new adminUi();
+    ui->sw->addWidget(m_adminui);
+
     ui->sw->setCurrentWidget(m_login);
 
 
@@ -52,25 +55,27 @@ MainWindow::MainWindow(QWidget *parent)
         ui->sw->setCurrentWidget(m_stuSco);
         m_stuSco->setUser(this->user);
         m_stuSco->initTableWidgetData();
+        resize(700,400);
     });
     //学生界面切换到修改信息界面
     connect(m_stuui,&StuUi::modifyInformationSignal,this,[this](){
         ui->sw->setCurrentWidget(m_stuModfiy);
         m_stuModfiy->setUser(this->user);
+        resize(300,400);
 
     });
     //修改信息界面切换到学生界面
     connect(m_stuModfiy,&StuModfiy::returnSignal,this,[this](){
         ui->sw->setCurrentWidget(m_stuui);
         m_stuui->showMessage();
+        resize(300,400);
     });
 
     //查看成绩界面切换到学生界面
     connect(m_stuSco,&StuScoreUi::returnToStuUiSiganls,this,[this](){
         ui->sw->setCurrentWidget(m_stuui);
+        resize(300,400);
     });
-
-    //老师界面的切换
 
 
 
@@ -124,12 +129,20 @@ MainWindow::~MainWindow()
         delete m_teaui;
         m_teaui=nullptr;
     }
+    if(m_adminui){
+        delete m_adminui;
+        m_adminui=nullptr;
+    }
 
 }
 
 
 void MainWindow::checkLogin()
 {
+    resize(1050,500);
+    ui->sw->setCurrentWidget(m_adminui);
+    return;
+
     user=m_login->getUser();
     QString pwd=m_login->getPwd();
     QString identity=m_login->getIdn();
@@ -156,6 +169,7 @@ void MainWindow::checkLogin()
         if(sql.next()){
             if(user==sql.value(0).toString() && pwd==sql.value(1).toString()){
                 ui->sw->setCurrentWidget(m_stuui);
+                resize(300,400);
                 m_stuui->showMessage();
             }
             else {
@@ -174,13 +188,12 @@ void MainWindow::checkLogin()
             qDebug() << "Query execution failed:" << sql.lastError().text();
             return;
         }
-        qDebug()<<sql.size();
         if(sql.next()){
             if(user==sql.value(0).toString() && pwd==sql.value(1).toString()){
                 ui->sw->setCurrentWidget(m_teaui);
+                resize(1050,500);
                 m_teaui->setUser(this->user);
                 m_teaui->showMessage();
-                resize(m_teaui->returnSize());
             }
             else {
                 QMessageBox::information(nullptr,"提示","用户名或密码错误");
@@ -189,7 +202,26 @@ void MainWindow::checkLogin()
         }
     }
     if(identity=="负责人"){
-
+        QSqlQuery sql;
+        QString str = "select admin_id,admin_password from usertea where admin_id =?";
+        sql.prepare(str);
+        sql.addBindValue(user.toInt());
+        if(!sql.exec()){
+            QMessageBox::information(nullptr,"提示","该用户不存在");
+            qDebug() << "Query execution failed:" << sql.lastError().text();
+            return;
+        }
+        if(sql.next()){
+            if(user==sql.value(0).toString() && pwd==sql.value(1).toString()){
+                ui->sw->setCurrentWidget(m_adminui);
+                m_adminui->setUser(this->user);
+                resize(1050,500);
+            }
+            else {
+                QMessageBox::information(nullptr,"提示","用户名或密码错误");
+                return;
+            }
+        }
     }
 
 }

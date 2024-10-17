@@ -26,35 +26,37 @@ class Ui_LoginDialog
 {
 public:
     QGridLayout *gridLayout;
-    QHBoxLayout *horizontalLayout_6;
-    QSpacerItem *horizontalSpacer_3;
-    QLabel *label_3;
-    QComboBox *identityChose;
-    QSpacerItem *horizontalSpacer_4;
+    QSpacerItem *verticalSpacer_2;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *label;
+    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer_7;
+    QPushButton *loginBtn;
+    QSpacerItem *horizontalSpacer_9;
+    QPushButton *regBtn;
+    QSpacerItem *horizontalSpacer_8;
     QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_2;
     QLabel *label_2;
     QLineEdit *pwd_edit;
     QSpacerItem *horizontalSpacer_5;
-    QSpacerItem *verticalSpacer;
+    QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *label_3;
+    QComboBox *identityChose;
+    QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QLabel *user_label;
     QLineEdit *user_edit;
     QSpacerItem *horizontalSpacer_6;
-    QHBoxLayout *horizontalLayout_5;
-    QLabel *label;
-    QHBoxLayout *horizontalLayout_3;
-    QPushButton *loginBtn;
-    QHBoxLayout *horizontalLayout_4;
-    QPushButton *regBtn;
-    QSpacerItem *verticalSpacer_2;
 
     void setupUi(QDialog *LoginDialog)
     {
         if (LoginDialog->objectName().isEmpty())
             LoginDialog->setObjectName("LoginDialog");
-        LoginDialog->resize(332, 448);
+        LoginDialog->resize(272, 401);
         LoginDialog->setStyleSheet(QString::fromUtf8("QPushButton\n"
 " {\n"
 "	border-radius:9px;\n"
@@ -71,6 +73,116 @@ public:
 ""));
         gridLayout = new QGridLayout(LoginDialog);
         gridLayout->setObjectName("gridLayout");
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
+
+        gridLayout->addItem(verticalSpacer_2, 6, 0, 1, 1);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        label = new QLabel(LoginDialog);
+        label->setObjectName("label");
+        label->setMaximumSize(QSize(250, 50));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("\346\226\271\346\255\243\345\260\217\347\257\206\344\275\223")});
+        font.setPointSize(18);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setUnderline(false);
+        label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\226\271\346\255\243\345\260\217\347\257\206\344\275\223\";"));
+        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        horizontalLayout_5->addWidget(label);
+
+
+        gridLayout->addLayout(horizontalLayout_5, 0, 0, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 30, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);
+
+        gridLayout->addItem(verticalSpacer, 4, 0, 1, 1);
+
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setContentsMargins(22, -1, 22, -1);
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_7);
+
+        loginBtn = new QPushButton(LoginDialog);
+        loginBtn->setObjectName("loginBtn");
+        loginBtn->setMinimumSize(QSize(100, 50));
+        loginBtn->setStyleSheet(QString::fromUtf8("QPushButton\n"
+" {\n"
+"	border:none;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.636, y1:0.977136, x2:0.477727, y2:0.187591, stop:0.00568182 rgba(176, 143, 234, 237), stop:1 rgba(251, 188, 230, 216));\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+" {\n"
+"	\n"
+"	background-color: qlineargradient(spread:pad, x1:0.25, y1:0.471, x2:0.0345452, y2:0.0512274, stop:0.00568182 rgba(159, 117, 234, 237), stop:1 rgba(251, 188, 230, 216));\n"
+"}"));
+
+        horizontalLayout_3->addWidget(loginBtn);
+
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_9);
+
+        regBtn = new QPushButton(LoginDialog);
+        regBtn->setObjectName("regBtn");
+        regBtn->setMinimumSize(QSize(100, 50));
+        regBtn->setStyleSheet(QString::fromUtf8("QPushButton\n"
+" {\n"
+"	border:none;\n"
+"	background-color: qlineargradient(spread:pad, x1:0.432, y1:0.0852273, x2:0.659727, y2:1, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(227, 166, 191, 246));\n"
+"}\n"
+"\n"
+"QPushButton:hover\n"
+" {\n"
+"	\n"
+"	background-color: qlineargradient(spread:pad, x1:0.046, y1:0, x2:0.255864, y2:0.494682, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(216, 146, 174, 246));\n"
+"}\n"
+""));
+
+        horizontalLayout_3->addWidget(regBtn);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_8);
+
+
+        gridLayout->addLayout(horizontalLayout_3, 5, 0, 1, 1);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setContentsMargins(4, 0, 15, 0);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_2);
+
+        label_2 = new QLabel(LoginDialog);
+        label_2->setObjectName("label_2");
+        label_2->setMinimumSize(QSize(25, 0));
+
+        horizontalLayout_2->addWidget(label_2);
+
+        pwd_edit = new QLineEdit(LoginDialog);
+        pwd_edit->setObjectName("pwd_edit");
+        pwd_edit->setMinimumSize(QSize(200, 25));
+        pwd_edit->setMaximumSize(QSize(200, 16777215));
+        pwd_edit->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
+"background-color: qlineargradient(spread:pad, x1:0, y1:0.222, x2:1, y2:0.784, stop:0 rgba(147, 198, 190, 128), stop:1 rgba(227, 166, 191, 147));"));
+
+        horizontalLayout_2->addWidget(pwd_edit);
+
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_5);
+
+
+        gridLayout->addLayout(horizontalLayout_2, 2, 0, 1, 1);
+
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName("horizontalLayout_6");
         horizontalLayout_6->setContentsMargins(4, 4, 15, -1);
@@ -102,39 +214,6 @@ public:
 
         gridLayout->addLayout(horizontalLayout_6, 3, 0, 1, 1);
 
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalLayout_2->setContentsMargins(4, 0, 15, 0);
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_2);
-
-        label_2 = new QLabel(LoginDialog);
-        label_2->setObjectName("label_2");
-        label_2->setMinimumSize(QSize(25, 0));
-
-        horizontalLayout_2->addWidget(label_2);
-
-        pwd_edit = new QLineEdit(LoginDialog);
-        pwd_edit->setObjectName("pwd_edit");
-        pwd_edit->setMinimumSize(QSize(200, 25));
-        pwd_edit->setMaximumSize(QSize(200, 16777215));
-        pwd_edit->setStyleSheet(QString::fromUtf8("border-radius:6px;\n"
-"background-color: qlineargradient(spread:pad, x1:0, y1:0.222, x2:1, y2:0.784, stop:0 rgba(147, 198, 190, 128), stop:1 rgba(227, 166, 191, 147));"));
-
-        horizontalLayout_2->addWidget(pwd_edit);
-
-        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout_2->addItem(horizontalSpacer_5);
-
-
-        gridLayout->addLayout(horizontalLayout_2, 2, 0, 1, 1);
-
-        verticalSpacer = new QSpacerItem(20, 30, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Maximum);
-
-        gridLayout->addItem(verticalSpacer, 4, 0, 1, 1);
-
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(4, 0, 15, 0);
@@ -164,81 +243,9 @@ public:
 
         gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
 
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setObjectName("horizontalLayout_5");
-        label = new QLabel(LoginDialog);
-        label->setObjectName("label");
-        label->setMaximumSize(QSize(250, 50));
-        QFont font;
-        font.setFamilies({QString::fromUtf8("\346\226\271\346\255\243\345\260\217\347\257\206\344\275\223")});
-        font.setPointSize(18);
-        font.setBold(false);
-        font.setItalic(false);
-        font.setUnderline(false);
-        label->setFont(font);
-        label->setStyleSheet(QString::fromUtf8("font: 18pt \"\346\226\271\346\255\243\345\260\217\347\257\206\344\275\223\";"));
-        label->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        horizontalLayout_5->addWidget(label);
-
-
-        gridLayout->addLayout(horizontalLayout_5, 0, 0, 1, 1);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        horizontalLayout_3->setContentsMargins(22, -1, 22, -1);
-        loginBtn = new QPushButton(LoginDialog);
-        loginBtn->setObjectName("loginBtn");
-        loginBtn->setMinimumSize(QSize(100, 50));
-        loginBtn->setStyleSheet(QString::fromUtf8("QPushButton\n"
-" {\n"
-"	border:none;\n"
-"	background-color: qlineargradient(spread:pad, x1:0.636, y1:0.977136, x2:0.477727, y2:0.187591, stop:0.00568182 rgba(176, 143, 234, 237), stop:1 rgba(251, 188, 230, 216));\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-" {\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0.25, y1:0.471, x2:0.0345452, y2:0.0512274, stop:0.00568182 rgba(159, 117, 234, 237), stop:1 rgba(251, 188, 230, 216));\n"
-"}"));
-
-        horizontalLayout_3->addWidget(loginBtn);
-
-
-        gridLayout->addLayout(horizontalLayout_3, 5, 0, 1, 1);
-
-        horizontalLayout_4 = new QHBoxLayout();
-        horizontalLayout_4->setObjectName("horizontalLayout_4");
-        horizontalLayout_4->setContentsMargins(22, -1, 22, -1);
-        regBtn = new QPushButton(LoginDialog);
-        regBtn->setObjectName("regBtn");
-        regBtn->setMinimumSize(QSize(100, 50));
-        regBtn->setStyleSheet(QString::fromUtf8("QPushButton\n"
-" {\n"
-"	border:none;\n"
-"	background-color: qlineargradient(spread:pad, x1:0.432, y1:0.0852273, x2:0.659727, y2:1, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(227, 166, 191, 246));\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-" {\n"
-"	\n"
-"	background-color: qlineargradient(spread:pad, x1:0.046, y1:0, x2:0.255864, y2:0.494682, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(216, 146, 174, 246));\n"
-"}\n"
-""));
-
-        horizontalLayout_4->addWidget(regBtn);
-
-
-        gridLayout->addLayout(horizontalLayout_4, 6, 0, 1, 1);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Minimum);
-
-        gridLayout->addItem(verticalSpacer_2, 7, 0, 1, 1);
-
         QWidget::setTabOrder(user_edit, pwd_edit);
         QWidget::setTabOrder(pwd_edit, identityChose);
         QWidget::setTabOrder(identityChose, loginBtn);
-        QWidget::setTabOrder(loginBtn, regBtn);
 
         retranslateUi(LoginDialog);
 
@@ -248,16 +255,16 @@ public:
     void retranslateUi(QDialog *LoginDialog)
     {
         LoginDialog->setWindowTitle(QCoreApplication::translate("LoginDialog", "\347\231\273\345\275\225\347\225\214\351\235\242", nullptr));
+        label->setText(QCoreApplication::translate("LoginDialog", "\345\255\246\347\224\237\347\256\241\347\220\206\347\263\273\347\273\237\347\231\273\345\275\225\347\225\214\351\235\242", nullptr));
+        loginBtn->setText(QCoreApplication::translate("LoginDialog", "\347\231\273\345\275\225", nullptr));
+        regBtn->setText(QCoreApplication::translate("LoginDialog", "\346\263\250\345\206\214", nullptr));
+        label_2->setText(QCoreApplication::translate("LoginDialog", "\345\257\206\347\240\201\357\274\232", nullptr));
         label_3->setText(QCoreApplication::translate("LoginDialog", "\350\272\253\344\273\275:", nullptr));
         identityChose->setItemText(0, QCoreApplication::translate("LoginDialog", "\345\255\246\347\224\237", nullptr));
         identityChose->setItemText(1, QCoreApplication::translate("LoginDialog", "\350\200\201\345\270\210", nullptr));
         identityChose->setItemText(2, QCoreApplication::translate("LoginDialog", "\350\264\237\350\264\243\344\272\272", nullptr));
 
-        label_2->setText(QCoreApplication::translate("LoginDialog", "\345\257\206\347\240\201\357\274\232", nullptr));
         user_label->setText(QCoreApplication::translate("LoginDialog", "\347\224\250\346\210\267\357\274\232", nullptr));
-        label->setText(QCoreApplication::translate("LoginDialog", "\345\255\246\347\224\237\347\256\241\347\220\206\347\263\273\347\273\237\347\231\273\345\275\225\347\225\214\351\235\242", nullptr));
-        loginBtn->setText(QCoreApplication::translate("LoginDialog", "\347\231\273\345\275\225", nullptr));
-        regBtn->setText(QCoreApplication::translate("LoginDialog", "\346\263\250\345\206\214", nullptr));
     } // retranslateUi
 
 };

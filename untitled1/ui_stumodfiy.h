@@ -26,28 +26,43 @@ class Ui_StuModfiy
 public:
     QGridLayout *gridLayout;
     QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer_3;
     QLabel *label_3;
     QLineEdit *sexEdit;
+    QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_11;
     QPushButton *confiirmBtn;
+    QSpacerItem *horizontalSpacer_15;
     QPushButton *returnBtn;
+    QSpacerItem *horizontalSpacer_12;
     QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_7;
     QLabel *label_5;
     QLineEdit *majorEdit;
+    QSpacerItem *horizontalSpacer_8;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_5;
     QLabel *label_4;
     QLineEdit *collegeEdit;
+    QSpacerItem *horizontalSpacer_6;
     QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer_9;
     QLabel *label_6;
     QLineEdit *classEdit;
+    QSpacerItem *horizontalSpacer_10;
     QHBoxLayout *horizontalLayout_8;
+    QSpacerItem *horizontalSpacer_13;
     QLabel *label_7;
     QLineEdit *pwdEdit;
     QPushButton *confirmPwdBtn;
+    QSpacerItem *horizontalSpacer_14;
     QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer;
     QLabel *label_2;
     QLineEdit *nameEdit;
+    QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpacerItem *verticalSpacer_2;
@@ -56,7 +71,7 @@ public:
     {
         if (StuModfiy->objectName().isEmpty())
             StuModfiy->setObjectName("StuModfiy");
-        StuModfiy->resize(300, 500);
+        StuModfiy->resize(228, 440);
         StuModfiy->setStyleSheet(QString::fromUtf8("#frame {\n"
 "border-image: url(:/img/cnb.jpg);}\n"
 "\n"
@@ -66,6 +81,10 @@ public:
         gridLayout->setContentsMargins(11, -1, 11, -1);
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_3);
+
         label_3 = new QLabel(StuModfiy);
         label_3->setObjectName("label_3");
 
@@ -76,16 +95,28 @@ public:
 
         horizontalLayout_3->addWidget(sexEdit);
 
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_4);
+
 
         gridLayout->addLayout(horizontalLayout_3, 3, 0, 1, 1);
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName("horizontalLayout_7");
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_11);
+
         confiirmBtn = new QPushButton(StuModfiy);
         confiirmBtn->setObjectName("confiirmBtn");
         confiirmBtn->setMinimumSize(QSize(0, 30));
 
         horizontalLayout_7->addWidget(confiirmBtn);
+
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_15);
 
         returnBtn = new QPushButton(StuModfiy);
         returnBtn->setObjectName("returnBtn");
@@ -93,11 +124,19 @@ public:
 
         horizontalLayout_7->addWidget(returnBtn);
 
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_12);
+
 
         gridLayout->addLayout(horizontalLayout_7, 7, 0, 1, 2);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_7);
+
         label_5 = new QLabel(StuModfiy);
         label_5->setObjectName("label_5");
 
@@ -108,6 +147,10 @@ public:
 
         horizontalLayout_4->addWidget(majorEdit);
 
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_8);
+
 
         gridLayout->addLayout(horizontalLayout_4, 5, 0, 1, 1);
 
@@ -117,6 +160,10 @@ public:
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName("horizontalLayout_5");
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_5);
+
         label_4 = new QLabel(StuModfiy);
         label_4->setObjectName("label_4");
 
@@ -127,11 +174,19 @@ public:
 
         horizontalLayout_5->addWidget(collegeEdit);
 
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_6);
+
 
         gridLayout->addLayout(horizontalLayout_5, 4, 0, 1, 1);
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName("horizontalLayout_6");
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_9);
+
         label_6 = new QLabel(StuModfiy);
         label_6->setObjectName("label_6");
 
@@ -142,11 +197,19 @@ public:
 
         horizontalLayout_6->addWidget(classEdit);
 
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_10);
+
 
         gridLayout->addLayout(horizontalLayout_6, 6, 0, 1, 1);
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName("horizontalLayout_8");
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_13);
+
         label_7 = new QLabel(StuModfiy);
         label_7->setObjectName("label_7");
 
@@ -162,11 +225,19 @@ public:
 
         horizontalLayout_8->addWidget(confirmPwdBtn);
 
+        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_14);
+
 
         gridLayout->addLayout(horizontalLayout_8, 8, 0, 1, 2);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
         label_2 = new QLabel(StuModfiy);
         label_2->setObjectName("label_2");
 
@@ -177,6 +248,10 @@ public:
         nameEdit->setStyleSheet(QString::fromUtf8("border-radius:6px;"));
 
         horizontalLayout_2->addWidget(nameEdit);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_2);
 
 
         gridLayout->addLayout(horizontalLayout_2, 2, 0, 1, 1);

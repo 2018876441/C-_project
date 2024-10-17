@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <memory>
+#include <QSettings>
 
 #include "logindialog.h"
 #include "registerdialog.h"
@@ -20,6 +21,7 @@
 //关于老师的界面
 #include "teaui.h"
 
+#include "adminui.h"
 using namespace std;
 
 QT_BEGIN_NAMESPACE
@@ -37,6 +39,7 @@ public:
     ~MainWindow();
 
     void connectMysql();
+
 public slots:
     void checkLogin();
 
@@ -52,6 +55,7 @@ private:
     StuScoreUi* m_stuSco;
     StuModfiy* m_stuModfiy;
     TeaUi* m_teaui;
+    adminUi* m_adminui;
 
 };
 #endif // MAINWINDOW_H

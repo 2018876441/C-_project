@@ -29,36 +29,55 @@ public:
     QHBoxLayout *horizontalLayout_8;
     QLabel *label_8;
     QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
     QLabel *label;
     QLineEdit *userEdit;
+    QSpacerItem *horizontalSpacer_2;
     QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer_3;
     QLabel *label_2;
     QLineEdit *nameEdit;
+    QSpacerItem *horizontalSpacer_4;
     QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer_5;
     QLabel *label_3;
     QLineEdit *sexEdit;
+    QSpacerItem *horizontalSpacer_6;
     QHBoxLayout *horizontalLayout_4;
+    QSpacerItem *horizontalSpacer_7;
     QLabel *label_4;
     QLineEdit *collegeEdit;
+    QSpacerItem *horizontalSpacer_8;
     QHBoxLayout *horizontalLayout_5;
+    QSpacerItem *horizontalSpacer_9;
     QLabel *label_5;
     QLineEdit *majorEdit;
+    QSpacerItem *horizontalSpacer_10;
     QHBoxLayout *horizontalLayout_7;
+    QSpacerItem *horizontalSpacer_11;
     QLabel *label_6;
     QLineEdit *classEdit;
+    QSpacerItem *horizontalSpacer_12;
     QHBoxLayout *horizontalLayout_6;
+    QSpacerItem *horizontalSpacer_13;
     QLabel *label_7;
     QLineEdit *pwdEdit;
-    QVBoxLayout *verticalLayout_3;
+    QSpacerItem *horizontalSpacer_14;
+    QHBoxLayout *horizontalLayout_9;
+    QSpacerItem *horizontalSpacer_15;
     QPushButton *regBtn;
+    QSpacerItem *horizontalSpacer_16;
+    QHBoxLayout *horizontalLayout_10;
+    QSpacerItem *horizontalSpacer_18;
     QPushButton *returnBtn;
+    QSpacerItem *horizontalSpacer_17;
     QSpacerItem *verticalSpacer_2;
 
     void setupUi(QDialog *StuRegisterDialog)
     {
         if (StuRegisterDialog->objectName().isEmpty())
             StuRegisterDialog->setObjectName("StuRegisterDialog");
-        StuRegisterDialog->resize(300, 500);
+        StuRegisterDialog->resize(279, 467);
         StuRegisterDialog->setStyleSheet(QString::fromUtf8("QDialog{border-image: url(:/img/cnh.jpg);}\n"
 "QLineEdit{border-radius:6px;background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(255, 255, 255, 66), stop:1 rgba(235, 236, 236, 51));}"));
         verticalLayout = new QVBoxLayout(StuRegisterDialog);
@@ -80,6 +99,10 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
         label = new QLabel(StuRegisterDialog);
         label->setObjectName("label");
 
@@ -92,11 +115,19 @@ public:
 
         horizontalLayout->addWidget(userEdit);
 
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
 
         verticalLayout->addLayout(horizontalLayout);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_3);
+
         label_2 = new QLabel(StuRegisterDialog);
         label_2->setObjectName("label_2");
 
@@ -108,11 +139,19 @@ public:
 
         horizontalLayout_2->addWidget(nameEdit);
 
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_4);
+
 
         verticalLayout->addLayout(horizontalLayout_2);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_5);
+
         label_3 = new QLabel(StuRegisterDialog);
         label_3->setObjectName("label_3");
 
@@ -123,11 +162,19 @@ public:
 
         horizontalLayout_3->addWidget(sexEdit);
 
+        horizontalSpacer_6 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer_6);
+
 
         verticalLayout->addLayout(horizontalLayout_3);
 
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName("horizontalLayout_4");
+        horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_7);
+
         label_4 = new QLabel(StuRegisterDialog);
         label_4->setObjectName("label_4");
 
@@ -138,11 +185,19 @@ public:
 
         horizontalLayout_4->addWidget(collegeEdit);
 
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_4->addItem(horizontalSpacer_8);
+
 
         verticalLayout->addLayout(horizontalLayout_4);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName("horizontalLayout_5");
+        horizontalSpacer_9 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_9);
+
         label_5 = new QLabel(StuRegisterDialog);
         label_5->setObjectName("label_5");
 
@@ -153,11 +208,19 @@ public:
 
         horizontalLayout_5->addWidget(majorEdit);
 
+        horizontalSpacer_10 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_5->addItem(horizontalSpacer_10);
+
 
         verticalLayout->addLayout(horizontalLayout_5);
 
         horizontalLayout_7 = new QHBoxLayout();
         horizontalLayout_7->setObjectName("horizontalLayout_7");
+        horizontalSpacer_11 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_11);
+
         label_6 = new QLabel(StuRegisterDialog);
         label_6->setObjectName("label_6");
 
@@ -168,11 +231,19 @@ public:
 
         horizontalLayout_7->addWidget(classEdit);
 
+        horizontalSpacer_12 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_7->addItem(horizontalSpacer_12);
+
 
         verticalLayout->addLayout(horizontalLayout_7);
 
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setObjectName("horizontalLayout_6");
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_13);
+
         label_7 = new QLabel(StuRegisterDialog);
         label_7->setObjectName("label_7");
 
@@ -183,33 +254,59 @@ public:
 
         horizontalLayout_6->addWidget(pwdEdit);
 
+        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_6->addItem(horizontalSpacer_14);
+
 
         verticalLayout->addLayout(horizontalLayout_6);
 
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setObjectName("verticalLayout_3");
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName("horizontalLayout_9");
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_15);
+
         regBtn = new QPushButton(StuRegisterDialog);
         regBtn->setObjectName("regBtn");
-        regBtn->setMinimumSize(QSize(50, 50));
+        regBtn->setMinimumSize(QSize(150, 50));
         regBtn->setStyleSheet(QString::fromUtf8("border-radius:8px;\n"
 "background-color: qlineargradient(spread:pad, x1:0.432, y1:0.0852273, x2:0.659727, y2:1, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(227, 166, 191, 246));"));
 
-        verticalLayout_3->addWidget(regBtn);
+        horizontalLayout_9->addWidget(regBtn);
+
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_16);
+
+
+        verticalLayout->addLayout(horizontalLayout_9);
+
+        horizontalLayout_10 = new QHBoxLayout();
+        horizontalLayout_10->setObjectName("horizontalLayout_10");
+        horizontalLayout_10->setContentsMargins(-1, 5, -1, -1);
+        horizontalSpacer_18 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_18);
 
         returnBtn = new QPushButton(StuRegisterDialog);
         returnBtn->setObjectName("returnBtn");
-        returnBtn->setMinimumSize(QSize(50, 50));
+        returnBtn->setMinimumSize(QSize(150, 50));
         returnBtn->setStyleSheet(QString::fromUtf8("border-radius:8px;\n"
 "background-color: qlineargradient(spread:pad, x1:0.107955, y1:0.137, x2:0.773, y2:0.920364, stop:0 rgba(230, 195, 87, 182), stop:1 rgba(227, 149, 191, 197));"));
 
-        verticalLayout_3->addWidget(returnBtn);
+        horizontalLayout_10->addWidget(returnBtn);
+
+        horizontalSpacer_17 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_10->addItem(horizontalSpacer_17);
+
+
+        verticalLayout->addLayout(horizontalLayout_10);
 
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
-        verticalLayout_3->addItem(verticalSpacer_2);
-
-
-        verticalLayout->addLayout(verticalLayout_3);
+        verticalLayout->addItem(verticalSpacer_2);
 
 
         retranslateUi(StuRegisterDialog);

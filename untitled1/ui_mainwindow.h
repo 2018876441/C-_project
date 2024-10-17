@@ -29,7 +29,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(16, 16);
+        MainWindow->resize(347, 391);
         MainWindow->setStyleSheet(QString::fromUtf8("QDialog{\n"
 "	border-image: url(:/img/bg-star.jpg);}"));
         centralwidget = new QWidget(MainWindow);

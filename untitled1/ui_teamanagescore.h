@@ -14,6 +14,7 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
@@ -27,6 +28,7 @@ public:
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QComboBox *comboBox;
+    QPushButton *pushButton;
     QSpacerItem *horizontalSpacer;
     QTableWidget *tableWidget;
 
@@ -53,6 +55,12 @@ public:
         comboBox->setMaximumSize(QSize(150, 16777215));
 
         horizontalLayout->addWidget(comboBox);
+
+        pushButton = new QPushButton(teaManageScore);
+        pushButton->setObjectName("pushButton");
+        pushButton->setMinimumSize(QSize(100, 22));
+
+        horizontalLayout->addWidget(pushButton);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -100,6 +108,7 @@ public:
         comboBox->setItemText(3, QCoreApplication::translate("teaManageScore", "\345\255\246\347\224\237\347\217\255\347\272\247", nullptr));
         comboBox->setItemText(4, QCoreApplication::translate("teaManageScore", "\345\255\246\345\217\267", nullptr));
 
+        pushButton->setText(QCoreApplication::translate("teaManageScore", "\345\210\267\346\226\260", nullptr));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QCoreApplication::translate("teaManageScore", "\350\257\276\347\250\213\345\220\215\347\247\260", nullptr));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);

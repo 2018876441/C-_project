@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>314</width>
-    <height>483</height>
+    <width>272</width>
+    <height>401</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,19 +30,80 @@ QDialog{
 </string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="3" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_6">
-     <property name="leftMargin">
-      <number>4</number>
+   <item row="6" column="0">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
-     <property name="topMargin">
-      <number>4</number>
+     <property name="sizeType">
+      <enum>QSizePolicy::Policy::Minimum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>方正小篆体</family>
+         <pointsize>18</pointsize>
+         <italic>false</italic>
+         <bold>false</bold>
+         <underline>false</underline>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 18pt &quot;方正小篆体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>学生管理系统登录界面</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="4" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Policy::Maximum</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>30</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="leftMargin">
+      <number>22</number>
      </property>
      <property name="rightMargin">
-      <number>15</number>
+      <number>22</number>
      </property>
      <item>
-      <spacer name="horizontalSpacer_3">
+      <spacer name="horizontalSpacer_7">
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
        </property>
@@ -55,44 +116,73 @@ QDialog{
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>身份:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="identityChose">
+      <widget class="QPushButton" name="loginBtn">
        <property name="minimumSize">
         <size>
-         <width>200</width>
-         <height>25</height>
+         <width>100</width>
+         <height>50</height>
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgba(255, 219, 254, 55);
-font: 9pt &quot;微软雅黑&quot;;
-selection-background-color: rgba(253, 244, 255, 15);</string>
+        <string notr="true">QPushButton
+ {
+	border:none;
+	background-color: qlineargradient(spread:pad, x1:0.636, y1:0.977136, x2:0.477727, y2:0.187591, stop:0.00568182 rgba(176, 143, 234, 237), stop:1 rgba(251, 188, 230, 216));
+}
+
+QPushButton:hover
+ {
+	
+	background-color: qlineargradient(spread:pad, x1:0.25, y1:0.471, x2:0.0345452, y2:0.0512274, stop:0.00568182 rgba(159, 117, 234, 237), stop:1 rgba(251, 188, 230, 216));
+}</string>
        </property>
-       <item>
-        <property name="text">
-         <string>学生</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>老师</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>负责人</string>
-        </property>
-       </item>
+       <property name="text">
+        <string>登录</string>
+       </property>
       </widget>
      </item>
      <item>
-      <spacer name="horizontalSpacer_4">
+      <spacer name="horizontalSpacer_9">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="regBtn">
+       <property name="minimumSize">
+        <size>
+         <width>100</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton
+ {
+	border:none;
+	background-color: qlineargradient(spread:pad, x1:0.432, y1:0.0852273, x2:0.659727, y2:1, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(227, 166, 191, 246));
+}
+
+QPushButton:hover
+ {
+	
+	background-color: qlineargradient(spread:pad, x1:0.046, y1:0, x2:0.255864, y2:0.494682, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(216, 146, 174, 246));
+}
+</string>
+       </property>
+       <property name="text">
+        <string>注册</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_8">
        <property name="orientation">
         <enum>Qt::Orientation::Horizontal</enum>
        </property>
@@ -181,21 +271,81 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.222, x2:1, y2:0.784, st
      </item>
     </layout>
    </item>
-   <item row="4" column="0">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
+   <item row="3" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <property name="leftMargin">
+      <number>4</number>
      </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Policy::Maximum</enum>
+     <property name="topMargin">
+      <number>4</number>
      </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>30</height>
-      </size>
+     <property name="rightMargin">
+      <number>15</number>
      </property>
-    </spacer>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>身份:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="identityChose">
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 219, 254, 55);
+font: 9pt &quot;微软雅黑&quot;;
+selection-background-color: rgba(253, 244, 255, 15);</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>学生</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>老师</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>负责人</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
    <item row="1" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -272,127 +422,6 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0.222, x2:1, y2:0.784, st
      </item>
     </layout>
    </item>
-   <item row="0" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_5">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="maximumSize">
-        <size>
-         <width>250</width>
-         <height>50</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>方正小篆体</family>
-         <pointsize>18</pointsize>
-         <italic>false</italic>
-         <bold>false</bold>
-         <underline>false</underline>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">font: 18pt &quot;方正小篆体&quot;;</string>
-       </property>
-       <property name="text">
-        <string>学生管理系统登录界面</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignmentFlag::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="5" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <property name="leftMargin">
-      <number>22</number>
-     </property>
-     <property name="rightMargin">
-      <number>22</number>
-     </property>
-     <item>
-      <widget class="QPushButton" name="loginBtn">
-       <property name="minimumSize">
-        <size>
-         <width>100</width>
-         <height>50</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton
- {
-	border:none;
-	background-color: qlineargradient(spread:pad, x1:0.636, y1:0.977136, x2:0.477727, y2:0.187591, stop:0.00568182 rgba(176, 143, 234, 237), stop:1 rgba(251, 188, 230, 216));
-}
-
-QPushButton:hover
- {
-	
-	background-color: qlineargradient(spread:pad, x1:0.25, y1:0.471, x2:0.0345452, y2:0.0512274, stop:0.00568182 rgba(159, 117, 234, 237), stop:1 rgba(251, 188, 230, 216));
-}</string>
-       </property>
-       <property name="text">
-        <string>登录</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="6" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
-     <property name="leftMargin">
-      <number>22</number>
-     </property>
-     <property name="rightMargin">
-      <number>22</number>
-     </property>
-     <item>
-      <widget class="QPushButton" name="regBtn">
-       <property name="minimumSize">
-        <size>
-         <width>100</width>
-         <height>50</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton
- {
-	border:none;
-	background-color: qlineargradient(spread:pad, x1:0.432, y1:0.0852273, x2:0.659727, y2:1, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(227, 166, 191, 246));
-}
-
-QPushButton:hover
- {
-	
-	background-color: qlineargradient(spread:pad, x1:0.046, y1:0, x2:0.255864, y2:0.494682, stop:0 rgba(147, 198, 190, 228), stop:1 rgba(216, 146, 174, 246));
-}
-</string>
-       </property>
-       <property name="text">
-        <string>注册</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="7" column="0">
-    <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Orientation::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::Policy::Minimum</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
   </layout>
  </widget>
  <tabstops>
@@ -400,7 +429,6 @@ QPushButton:hover
   <tabstop>pwd_edit</tabstop>
   <tabstop>identityChose</tabstop>
   <tabstop>loginBtn</tabstop>
-  <tabstop>regBtn</tabstop>
  </tabstops>
  <resources/>
  <connections/>

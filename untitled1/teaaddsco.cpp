@@ -66,7 +66,7 @@ teaAddSco::teaAddSco(QWidget *parent)
         if(!sql.exec()){
             qDebug()<<"插入失败："<<sql.lastError();
         }
-
+        emit refurbishSignal();
         this->accept();
     });
     connect(ui->exitBtn,&QPushButton::clicked,this,[this](){
