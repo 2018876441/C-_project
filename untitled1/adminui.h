@@ -2,7 +2,7 @@
 #define ADMINUI_H
 
 #include <QWidget>
-
+#include "adminteaman.h"
 namespace Ui {
 class adminUi;
 }
@@ -20,6 +20,7 @@ public:
 private:
     Ui::adminUi *ui;
     QString user;
+    adminTeaMan* m_adminTeaMan;
 };
 
 #endif // ADMINUI_H

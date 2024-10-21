@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adminteaman.cpp \
     adminui.cpp \
     databaseconnectionmanager.cpp \
     logindialog.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
     teaui.cpp
 
 HEADERS += \
+    adminteaman.h \
     adminui.h \
     databaseconnectionmanager.h \
     logindialog.h \
@@ -42,6 +44,7 @@ HEADERS += \
     teaui.h
 
 FORMS += \
+    adminteaman.ui \
     adminui.ui \
     logindialog.ui \
     mainwindow.ui \

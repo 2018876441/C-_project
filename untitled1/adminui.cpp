@@ -26,11 +26,20 @@ adminUi::adminUi(QWidget *parent)
         qDebug()<<"负责人获取数据失败";
     }
 
+    m_adminTeaMan=new adminTeaMan();
+    ui->sw->addWidget(m_adminTeaMan);
+    ui->sw->setCurrentWidget(m_adminTeaMan);
+    m_adminTeaMan->initTableDate();
+
 }
 
 adminUi::~adminUi()
 {
     delete ui;
+    if(m_adminTeaMan){
+        delete m_adminTeaMan;
+        m_adminTeaMan=nullptr;
+    }
 }
 
 void adminUi::setUser(QString user)

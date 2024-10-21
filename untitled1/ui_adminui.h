@@ -34,12 +34,10 @@ public:
     QLabel *label_2;
     QLineEdit *showcollege;
     QPushButton *pushButton_2;
-    QPushButton *pushButton;
-    QPushButton *pushButton_3;
     QSpacerItem *verticalSpacer;
     QFrame *frame;
     QVBoxLayout *verticalLayout_2;
-    QStackedWidget *stackedWidget;
+    QStackedWidget *sw;
 
     void setupUi(QWidget *adminUi)
     {
@@ -86,18 +84,14 @@ public:
 
         pushButton_2 = new QPushButton(adminUi);
         pushButton_2->setObjectName("pushButton_2");
+        QSizePolicy sizePolicy1(QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
+        pushButton_2->setSizePolicy(sizePolicy1);
+        pushButton_2->setMinimumSize(QSize(0, 30));
 
         verticalLayout->addWidget(pushButton_2);
-
-        pushButton = new QPushButton(adminUi);
-        pushButton->setObjectName("pushButton");
-
-        verticalLayout->addWidget(pushButton);
-
-        pushButton_3 = new QPushButton(adminUi);
-        pushButton_3->setObjectName("pushButton_3");
-
-        verticalLayout->addWidget(pushButton_3);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
@@ -112,12 +106,12 @@ public:
         frame->setFrameShadow(QFrame::Shadow::Sunken);
         verticalLayout_2 = new QVBoxLayout(frame);
         verticalLayout_2->setObjectName("verticalLayout_2");
-        stackedWidget = new QStackedWidget(frame);
-        stackedWidget->setObjectName("stackedWidget");
-        stackedWidget->setFrameShape(QFrame::Shape::Box);
-        stackedWidget->setFrameShadow(QFrame::Shadow::Raised);
+        sw = new QStackedWidget(frame);
+        sw->setObjectName("sw");
+        sw->setFrameShape(QFrame::Shape::Box);
+        sw->setFrameShadow(QFrame::Shadow::Raised);
 
-        verticalLayout_2->addWidget(stackedWidget);
+        verticalLayout_2->addWidget(sw);
 
 
         horizontalLayout->addWidget(frame);
@@ -135,9 +129,7 @@ public:
         adminUi->setWindowTitle(QCoreApplication::translate("adminUi", "Form", nullptr));
         label->setText(QCoreApplication::translate("adminUi", "\347\224\250\346\210\267\357\274\232", nullptr));
         label_2->setText(QCoreApplication::translate("adminUi", "\350\264\237\350\264\243\345\255\246\351\231\242", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("adminUi", "\347\256\241\347\220\206\350\200\201\345\270\210\350\257\276\347\250\213", nullptr));
-        pushButton->setText(QCoreApplication::translate("adminUi", "\347\256\241\347\220\206\345\255\246\347\224\237\350\257\276\347\250\213", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("adminUi", "\346\237\245\347\234\213\346\210\220\347\273\251", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("adminUi", "\347\256\241\347\220\206\350\200\201\345\270\210", nullptr));
     } // retranslateUi
 
 };

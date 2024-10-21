@@ -139,14 +139,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::checkLogin()
 {
-    resize(1050,500);
-    ui->sw->setCurrentWidget(m_adminui);
-    return;
 
     user=m_login->getUser();
     QString pwd=m_login->getPwd();
     QString identity=m_login->getIdn();
-
     if(user.isEmpty()) {
         QMessageBox::information(nullptr,"提示","用户名不能为空");
         return;
@@ -203,7 +199,7 @@ void MainWindow::checkLogin()
     }
     if(identity=="负责人"){
         QSqlQuery sql;
-        QString str = "select admin_id,admin_password from usertea where admin_id =?";
+        QString str = "select admin_id,admin_password from user_admin where admin_id =?";
         sql.prepare(str);
         sql.addBindValue(user.toInt());
         if(!sql.exec()){
