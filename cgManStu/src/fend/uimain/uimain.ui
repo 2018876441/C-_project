@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UiMain</class>
+ <widget class="QWidget" name="UiMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>259</width>
+    <height>369</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QStackedWidget" name="sw">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="UiStu" name="stu"/>
+     <widget class="UiTea" name="tea"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>UiStu</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uistu/uistu.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UiTea</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uitea/uitea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

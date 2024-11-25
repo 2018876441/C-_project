@@ -7,6 +7,7 @@ StuScoreUi::StuScoreUi(QWidget *parent)
 {
     ui->setupUi(this);
     initTableWidgetList();
+    ui->table->horizontalHeader()->setStretchLastSection(true);
     //筛选学期
     connect(ui->timeComBox,&QComboBox::currentTextChanged,this,[this](){
         initTableTitle();

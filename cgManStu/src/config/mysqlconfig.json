@@ -1,0 +1,10 @@
+[
+    {
+        "m_databaseName":"stuscosys",
+        "m_user":"ZJH",
+        "m_password":"123456",
+        "m_host":"123.207.61.105",
+        "m_port":"3306"
+    }
+
+]

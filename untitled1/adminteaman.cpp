@@ -6,6 +6,7 @@ adminTeaMan::adminTeaMan(QWidget *parent)
     , ui(new Ui::adminTeaMan)
 {
     ui->setupUi(this);
+    ui->tableWidget->horizontalHeader()->setStretchLastSection(true);
     initTableShow();
 
 }

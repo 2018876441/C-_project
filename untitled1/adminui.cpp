@@ -31,7 +31,9 @@ adminUi::adminUi(QWidget *parent)
     ui->sw->setCurrentWidget(m_adminTeaMan);
     m_adminTeaMan->initTableDate();
 
+
 }
+
 
 adminUi::~adminUi()
 {

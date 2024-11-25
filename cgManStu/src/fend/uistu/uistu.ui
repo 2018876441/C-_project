@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UiStu</class>
+ <widget class="QWidget" name="UiStu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>505</width>
+    <height>401</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <widget class="UiStuMain" name="page"/>
+     <widget class="UiStuMessage" name="page_3"/>
+     <widget class="UiStuScore" name="page_2"/>
+     <widget class="UiStuModfiy" name="page_4"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>UiStuMain</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uistu/uistumain/uistumain.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UiStuMessage</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uistu/uistumessage/uistumessage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UiStuScore</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uistu/uistuscore/uistuscore.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UiStuModfiy</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uistu/uistumodfiy/uistumodfiy.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>static/qss/default.qss</file>
+    </qresource>
+    <qresource prefix="/config">
+        <file>src/config/mysqlconfig.json</file>
+    </qresource>
+</RCC>
