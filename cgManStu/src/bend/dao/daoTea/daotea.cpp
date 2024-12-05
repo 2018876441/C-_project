@@ -51,11 +51,11 @@ QSqlQuery DaoTea::selectClassStuMessage(const QString &userId, const QString &cl
         "on cs.stu_id=stu.StuId "
         "left join score as s "
         "on (cs.stu_id=s.Stuid and cs.tea_id=s.tea_id and cs.course_id=s.lessonId) "
-        "where cs.tea_id=? and cs.course_id=?");
+        "where cs.tea_id=? and cs.course_id=? "
+        "order by stu.college,stu.classId ,stu.major");
     QVariantList var;
     var<<userId<<classId;
     return m_db.exec(sql,var);
-    //return m_db.exec(sql);
 
 }
 

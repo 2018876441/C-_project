@@ -17,10 +17,11 @@
    <item>
     <widget class="QStackedWidget" name="sw">
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="UiStu" name="stu"/>
      <widget class="UiTea" name="tea"/>
+     <widget class="uiadmin" name="admin"/>
     </widget>
    </item>
   </layout>
@@ -36,6 +37,12 @@
    <class>UiTea</class>
    <extends>QWidget</extends>
    <header>src/fend/uitea/uitea.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>uiadmin</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uiadmin/uiadmin.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

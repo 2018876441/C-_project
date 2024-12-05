@@ -8,6 +8,8 @@
 #include "src/bend/man/mantea.h"
 #include "src/bend/man/mandb.h"
 #include "src/fend/uitea/uitea.h"
+#include "src/bend/dao/daoAdmin/daoadmin.h"
+#include "src/fend/uiadmin/uiadminmain/uiadminmain.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -40,6 +42,7 @@ private:
     QPoint m_start;
     daoStu m_daostu;
     DaoTea m_daotea;
+    daoadmin m_daoadmin;
     QString userid;
     QString pwd;
 };

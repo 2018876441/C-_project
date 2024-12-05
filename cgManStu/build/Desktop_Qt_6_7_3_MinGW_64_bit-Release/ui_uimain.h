@@ -14,7 +14,9 @@
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "src/fend/uiadmin/uiadmin.h"
 #include "src/fend/uistu/uistu.h"
+#include "src/fend/uitea/uitea.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -22,9 +24,10 @@ class Ui_UiMain
 {
 public:
     QVBoxLayout *verticalLayout;
-    QStackedWidget *stackedWidget;
-    UiStu *page;
-    QWidget *page_2;
+    QStackedWidget *sw;
+    UiStu *stu;
+    UiTea *tea;
+    uiadmin *admin;
 
     void setupUi(QWidget *UiMain)
     {
@@ -33,21 +36,24 @@ public:
         UiMain->resize(259, 369);
         verticalLayout = new QVBoxLayout(UiMain);
         verticalLayout->setObjectName("verticalLayout");
-        stackedWidget = new QStackedWidget(UiMain);
-        stackedWidget->setObjectName("stackedWidget");
-        page = new UiStu();
-        page->setObjectName("page");
-        stackedWidget->addWidget(page);
-        page_2 = new QWidget();
-        page_2->setObjectName("page_2");
-        stackedWidget->addWidget(page_2);
+        sw = new QStackedWidget(UiMain);
+        sw->setObjectName("sw");
+        stu = new UiStu();
+        stu->setObjectName("stu");
+        sw->addWidget(stu);
+        tea = new UiTea();
+        tea->setObjectName("tea");
+        sw->addWidget(tea);
+        admin = new uiadmin();
+        admin->setObjectName("admin");
+        sw->addWidget(admin);
 
-        verticalLayout->addWidget(stackedWidget);
+        verticalLayout->addWidget(sw);
 
 
         retranslateUi(UiMain);
 
-        stackedWidget->setCurrentIndex(0);
+        sw->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(UiMain);

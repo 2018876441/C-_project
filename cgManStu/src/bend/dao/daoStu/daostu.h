@@ -13,6 +13,8 @@ public:
     QSqlQuery selectStuMess(const QString& userId);
     bool updatePassWord(const QString& userId,const QString& pwd);
     QSqlQuery findLesson(const QString &userId,const QString& lessonName);
+    QSqlQuery selectSortTerm(const QString& userId,const QString& termName);
+
 
 private:
     Dbmysql m_db;

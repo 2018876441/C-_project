@@ -31,7 +31,7 @@ public:
     QLabel *label;
     QPushButton *pushButton_2;
     QFormLayout *formLayout;
-    QLabel *Label;
+    QLabel *Labeluser;
     QLineEdit *userEdit;
     QLabel *Label_2;
     QLineEdit *pwdEdit;
@@ -48,7 +48,7 @@ public:
     {
         if (UiDialog->objectName().isEmpty())
             UiDialog->setObjectName("UiDialog");
-        UiDialog->resize(224, 306);
+        UiDialog->resize(256, 350);
         verticalLayout = new QVBoxLayout(UiDialog);
         verticalLayout->setObjectName("verticalLayout");
         horizontalLayout = new QHBoxLayout();
@@ -71,11 +71,11 @@ public:
 
         formLayout = new QFormLayout();
         formLayout->setObjectName("formLayout");
-        Label = new QLabel(UiDialog);
-        Label->setObjectName("Label");
-        Label->setMinimumSize(QSize(0, 25));
+        Labeluser = new QLabel(UiDialog);
+        Labeluser->setObjectName("Labeluser");
+        Labeluser->setMinimumSize(QSize(0, 25));
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, Label);
+        formLayout->setWidget(1, QFormLayout::LabelRole, Labeluser);
 
         userEdit = new QLineEdit(UiDialog);
         userEdit->setObjectName("userEdit");
@@ -144,6 +144,9 @@ public:
 
         retranslateUi(UiDialog);
 
+        pushButton->setDefault(true);
+
+
         QMetaObject::connectSlotsByName(UiDialog);
     } // setupUi
 
@@ -152,7 +155,7 @@ public:
         UiDialog->setWindowTitle(QCoreApplication::translate("UiDialog", "UiDialog", nullptr));
         label->setText(QCoreApplication::translate("UiDialog", "\347\231\273\345\275\225", nullptr));
         pushButton_2->setText(QCoreApplication::translate("UiDialog", "X", nullptr));
-        Label->setText(QCoreApplication::translate("UiDialog", "\347\224\250\346\210\267\345\220\215", nullptr));
+        Labeluser->setText(QCoreApplication::translate("UiDialog", "\347\224\250\346\210\267\345\220\215", nullptr));
         Label_2->setText(QCoreApplication::translate("UiDialog", "\345\257\206\347\240\201", nullptr));
         Label_3->setText(QCoreApplication::translate("UiDialog", "\350\272\253\344\273\275", nullptr));
         comBox->setItemText(0, QCoreApplication::translate("UiDialog", "\345\255\246\347\224\237", nullptr));

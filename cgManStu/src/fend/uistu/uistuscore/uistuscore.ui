@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>371</width>
-    <height>400</height>
+    <width>545</width>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,6 +31,96 @@
      <property name="topMargin">
       <number>0</number>
      </property>
+     <item>
+      <widget class="QComboBox" name="comboBox">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>0</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>学期</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大一上</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大一下</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大二上</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大二下</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大三上</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大三下</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大四上</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>大四下</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>0</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>学年</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>第一学年</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>第二学年</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>第三学年</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>第四学年</string>
+        </property>
+       </item>
+      </widget>
+     </item>
      <item>
       <widget class="QLabel" name="label">
        <property name="text">

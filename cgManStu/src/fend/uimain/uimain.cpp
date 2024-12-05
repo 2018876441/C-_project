@@ -7,6 +7,9 @@ UiMain::UiMain(QWidget *parent)
     , ui(new Ui::UiMain)
 {
     ui->setupUi(this);
+
+    setWindowIcon(QIcon(":/config/static/ic.ico"));
+
     m_UiSize=QSize(this->size().width(),this->size().height());
 
     UiStu* stu = qobject_cast<UiStu*>(ui->sw->widget(0));
@@ -23,6 +26,12 @@ UiMain::UiMain(QWidget *parent)
 
     UiTea* tea=qobject_cast<UiTea*>(ui->sw->widget(1));
     connect(tea,&UiTea::toLoginUi,this,[this](){
+        hide();
+        showLoginUi();
+    });
+
+    uiadmin* admin=qobject_cast<uiadmin*>(ui->sw->widget(2));
+    connect(admin,&uiadmin::toLoginUi,this,[this](){
         hide();
         showLoginUi();
     });
@@ -46,6 +55,7 @@ void UiMain::showLoginUi()
         connect(m_loginUi,&UiDialog::accepted,this,[this](){
             if(MDB->identity()=="学生") ui->sw->setCurrentIndex(0);
             else if(MDB->identity()=="老师") ui->sw->setCurrentIndex(1);
+            else ui->sw->setCurrentIndex(2);
             this->show();
         });
         connect(m_loginUi,&UiDialog::resizeTeaUi,this,[this](){

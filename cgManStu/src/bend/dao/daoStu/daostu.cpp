@@ -66,5 +66,19 @@ QSqlQuery daoStu::findLesson(const QString &userId,const QString &lessonName)
     return m_db.exec(sql,var);
 }
 
+QSqlQuery daoStu::selectSortTerm(const QString &userId, const QString &termName)
+{
+    QString sql=QString ("select s.lessonId,c.name,s._score,u.name,s.term from score as s "
+                          "left join course as c on s.lessonId=c.courseId "
+                          "left join usertea as u on s.tea_id=u.TeaId "
+                          "where s.Stuid=? and term=?;");
+    QVariantList var;
+    var<<userId<<termName;
+
+    return m_db.exec(sql,var);
+
+
+}
+
 
 

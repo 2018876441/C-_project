@@ -7,6 +7,7 @@ UiDialog::UiDialog(QWidget *parent)
     , ui(new Ui::UiDialog)
 {
     ui->setupUi(this);
+    setWindowIcon(QIcon(":/config/static/ic.ico"));
     setWindowFlags(Qt::CustomizeWindowHint);
 
     ui->label->setProperty("style","h3");
@@ -87,7 +88,6 @@ void UiDialog::on_pushButton_clicked()
             accept();
             emit resizeTeaUi();
             MT->selectClass();
-            //MTS->selectClassStuMessage("1");
             UiTea tea;
             tea.init();
 
@@ -96,6 +96,27 @@ void UiDialog::on_pushButton_clicked()
             QMessageBox::information(this,"提示","该用户名或密码错误");
             return;
         }
+    }
+    else if(identity=="管理员")
+    {
+        QSqlQuery sql= m_daoadmin.exists(userid);
+
+        if(!sql.next())
+        {
+            QMessageBox::information(this,"提示","用户不存在");
+            return;
+        }
+        if(sql.value(0).toString()==userid && sql.value(1).toString()==pwd)
+        {
+            accept();
+            MDB->setCollege(sql.value(2).toString());
+
+        }
+        else{
+            QMessageBox::information(this,"提示","该用户名或密码错误");
+            return;
+        }
+
     }
 
 }

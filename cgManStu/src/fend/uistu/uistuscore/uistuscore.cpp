@@ -11,6 +11,9 @@ UiStuScore::UiStuScore(QWidget *parent)
     //设置最后一列贴紧边界
     ui->tableView->horizontalHeader()->setStretchLastSection(true);
 
+    connect(ui->comboBox,&QComboBox::currentTextChanged,this,&UiStuScore::termSort);
+    connect(ui->comboBox_2,&QComboBox::currentTextChanged,this,&UiStuScore::termYearSort);
+
 }
 
 UiStuScore::~UiStuScore()
@@ -36,5 +39,33 @@ void UiStuScore::on_pushButton_2_clicked()
 void UiStuScore::on_pushButton_3_clicked()
 {
     MS->selectScore();
+}
+
+void UiStuScore::termSort(const QString &name)
+{
+    if(name=="学期") return;
+    MS->selectSortTerm(name);
+}
+
+void UiStuScore::termYearSort(const QString &name)
+{
+    if(name=="学年") return;
+    else if(name=="第一学年")
+    {
+        MS->selectSortTermYear(QString("大一上"),QString("大一下"));
+    }
+    else if(name=="第二学年")
+    {
+        MS->selectSortTermYear(QString("大二上"),QString("大二下"));
+    }
+    else if(name=="第二学年")
+    {
+        MS->selectSortTermYear(QString("大三上"),QString("大三下"));
+    }
+    else if(name=="第二学年")
+    {
+        MS->selectSortTermYear(QString("大四上"),QString("大四下"));
+    }
+
 }
 

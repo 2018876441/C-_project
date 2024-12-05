@@ -26,9 +26,6 @@ ManTeaSco::ManTeaSco(QObject *parent)
         if(!lessonId.isNull()) strList<<lessonId;
         if(strList.size()!=4) return;
         m_daotea.selectExistsSco(strList);
-
-
-        //m_daotea.selectExistsSco(strList);
     });
 }
 

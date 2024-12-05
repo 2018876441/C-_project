@@ -3,6 +3,7 @@
         <file>static/qss/default.qss</file>
     </qresource>
     <qresource prefix="/config">
-        <file>src/config/mysqlconfig.json</file>
+        <file>static/config/mysqlconfig.json</file>
+        <file>static/ic.ico</file>
     </qresource>
 </RCC>

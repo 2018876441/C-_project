@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>uiadmin</class>
+ <widget class="QWidget" name="uiadmin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>292</width>
+    <height>340</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <widget class="uiadminmain" name="main"/>
+     <widget class="uiAdminStuMessage" name="stuMessage"/>
+     <widget class="uiAdminTeaMessage" name="teaMessage"/>
+     <widget class="UiManTeaCourse" name="manTea"/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>uiadminmain</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uiadmin/uiadminmain/uiadminmain.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>uiAdminStuMessage</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uiadmin/uiadminstumessage/uiadminstumessage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>uiAdminTeaMessage</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uiadmin/uiadminteamessage/uiadminteamessage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>UiManTeaCourse</class>
+   <extends>QWidget</extends>
+   <header>src/fend/uiadmin/uimanteacourse/uimanteacourse.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

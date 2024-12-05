@@ -83,6 +83,7 @@ public:
 
         LineEdit = new QLineEdit(UiStuMessage);
         LineEdit->setObjectName("LineEdit");
+        LineEdit->setReadOnly(true);
 
         formLayout->setWidget(1, QFormLayout::FieldRole, LineEdit);
 
@@ -93,6 +94,7 @@ public:
 
         LineEdit_2 = new QLineEdit(UiStuMessage);
         LineEdit_2->setObjectName("LineEdit_2");
+        LineEdit_2->setReadOnly(true);
 
         formLayout->setWidget(3, QFormLayout::FieldRole, LineEdit_2);
 
@@ -103,6 +105,7 @@ public:
 
         LineEdit_3 = new QLineEdit(UiStuMessage);
         LineEdit_3->setObjectName("LineEdit_3");
+        LineEdit_3->setReadOnly(true);
 
         formLayout->setWidget(5, QFormLayout::FieldRole, LineEdit_3);
 
@@ -113,6 +116,7 @@ public:
 
         LineEdit_4 = new QLineEdit(UiStuMessage);
         LineEdit_4->setObjectName("LineEdit_4");
+        LineEdit_4->setReadOnly(true);
 
         formLayout->setWidget(7, QFormLayout::FieldRole, LineEdit_4);
 
@@ -123,6 +127,7 @@ public:
 
         LineEdit_5 = new QLineEdit(UiStuMessage);
         LineEdit_5->setObjectName("LineEdit_5");
+        LineEdit_5->setReadOnly(true);
 
         formLayout->setWidget(9, QFormLayout::FieldRole, LineEdit_5);
 

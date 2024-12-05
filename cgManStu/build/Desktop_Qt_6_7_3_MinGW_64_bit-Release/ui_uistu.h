@@ -38,6 +38,7 @@ public:
         UiStu->resize(505, 401);
         verticalLayout = new QVBoxLayout(UiStu);
         verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
         stackedWidget = new QStackedWidget(UiStu);
         stackedWidget->setObjectName("stackedWidget");
         page = new UiStuMain();

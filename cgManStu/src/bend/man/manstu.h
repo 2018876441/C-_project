@@ -24,6 +24,9 @@ public:
     bool updatePwd();
     bool findLesson(const QString& name);
 
+    void selectSortTerm(const QString& name);
+    void selectSortTermYear(const QString &name1,const QString& name2);
+
 private:
     QStandardItemModel* m_model=nullptr;
     daoStu m_daostu;

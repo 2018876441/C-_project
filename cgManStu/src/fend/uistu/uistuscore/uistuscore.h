@@ -22,6 +22,9 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void termSort(const QString& name);
+
+    void termYearSort(const QString &name);
 signals:
     void toUiStuMain();
 

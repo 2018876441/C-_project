@@ -34,6 +34,8 @@ public:
     QSpacerItem *verticalSpacer_3;
     QPushButton *pushButton_2;
     QSpacerItem *verticalSpacer;
+    QPushButton *pushButton_4;
+    QSpacerItem *verticalSpacer_5;
 
     void setupUi(QWidget *UiStuMain)
     {
@@ -89,8 +91,17 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer);
 
+        pushButton_4 = new QPushButton(UiStuMain);
+        pushButton_4->setObjectName("pushButton_4");
+
+        verticalLayout_2->addWidget(pushButton_4);
+
 
         verticalLayout->addLayout(verticalLayout_2);
+
+        verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_5);
 
         verticalLayout->setStretch(2, 1);
 
@@ -106,6 +117,7 @@ public:
         pushButton->setText(QCoreApplication::translate("UiStuMain", "\346\237\245\347\234\213\345\255\246\347\224\237\344\277\241\346\201\257", nullptr));
         pushButton_3->setText(QCoreApplication::translate("UiStuMain", "\346\237\245\347\234\213\345\255\246\347\224\237\346\210\220\347\273\251", nullptr));
         pushButton_2->setText(QCoreApplication::translate("UiStuMain", "\344\277\256\346\224\271\345\255\246\347\224\237\344\277\241\346\201\257", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("UiStuMain", "\351\200\200\345\207\272\347\231\273\345\275\225", nullptr));
     } // retranslateUi
 
 };

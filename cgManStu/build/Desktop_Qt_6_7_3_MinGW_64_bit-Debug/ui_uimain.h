@@ -14,6 +14,7 @@
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "src/fend/uiadmin/uiadmin.h"
 #include "src/fend/uistu/uistu.h"
 #include "src/fend/uitea/uitea.h"
 
@@ -26,6 +27,7 @@ public:
     QStackedWidget *sw;
     UiStu *stu;
     UiTea *tea;
+    uiadmin *admin;
 
     void setupUi(QWidget *UiMain)
     {
@@ -42,13 +44,16 @@ public:
         tea = new UiTea();
         tea->setObjectName("tea");
         sw->addWidget(tea);
+        admin = new uiadmin();
+        admin->setObjectName("admin");
+        sw->addWidget(admin);
 
         verticalLayout->addWidget(sw);
 
 
         retranslateUi(UiMain);
 
-        sw->setCurrentIndex(1);
+        sw->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(UiMain);
